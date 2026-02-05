@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- esercizio di pagina 89 del file "CdT_24_25_TEI_editorial__2025.pdf"-->
+
+<TEI xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Titolo</title>
+        <author>Autore</author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Publisher</publisher>
+        <date when="2025-06-11">2025-06-11</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Documento XML utile per test XSLT</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div>
+        <head>Intestazione</head>
+        <p>Paragrafo</p>
+      </div>
+    </body>
+  </text>
+</TEI>

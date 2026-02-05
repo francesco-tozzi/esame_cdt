@@ -1,0 +1,7 @@
+VALIDAZIONE DI 3a:
+java -cp .\xerces-2_12_2\* dom.Counter -v .\2_markup_pt2\3a_dtd_interna.xml
+.\2_markup_pt2\3a_dtd_interna.xml: 29;5;0 ms (5 elems, 0 attrs, 21 spaces, 84 chars)
+
+VALIDAZIONE DI 3b:
+java -cp .\xerces-2_12_2\* dom.Counter -v .\2_markup_pt2\3b_dtd_esterna.xml     
+.\2_markup_pt2\3b_dtd_esterna.xml: 22;8;0 ms (5 elems, 0 attrs, 21 spaces, 84 chars)

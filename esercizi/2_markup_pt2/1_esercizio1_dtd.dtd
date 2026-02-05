@@ -1,0 +1,7 @@
+<!-- esercizio di pagina 38 del file "CdT_24_25_lez_markup__2025_PART-II.pdf"-->
+
+<!ELEMENT TEI (header, facsimile?, text+)> <!-- definisco la root TEI e i figli, le cui occorrenze sono specificate dal modificatore accanto -->
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT facsimile (#PCDATA)>
+<!ELEMENT text (#PCDATA)>
+<!-- ogni figlio ha content model testuale che indico con #PCDATA -->

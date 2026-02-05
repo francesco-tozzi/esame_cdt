@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- esercizio di pagina 54 del file "CdT_24_25_lez_markup__2025_PART-II.pdf"-->
+
+<!--specifico la DTD all'interno del file .xml-->
+<!DOCTYPE TEI [
+    <!ELEMENT TEI (header, facsimile?, text+)> 
+    <!ELEMENT header (#PCDATA)>
+    <!ELEMENT facsimile (#PCDATA)>
+    <!ELEMENT text (#PCDATA)>
+]>
+
+<!--definisco la struttura degli elementi del file .xml in ottemperanza alle regole definite nella DTD-->
+<TEI>
+    <header> <!--elemento con una esatta occorrenza, contenente testo-->
+        Header
+    </header>
+    <facsimile> <!--elemento con zero o una occorrenza (io ho scelto una occorrenza), contenente testo-->
+        Facsimile
+    </facsimile>
+    <text> <!--elemento con una o più occorrenze (io ho scelto due occorrenze), contenente testo-->
+        Text1
+    </text>
+    <text>
+        Text2
+    </text>
+</TEI>
+

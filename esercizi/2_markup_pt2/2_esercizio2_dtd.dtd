@@ -1,0 +1,16 @@
+<!-- esercizio di pagina 48 del file "CdT_24_25_lez_markup__2025_PART-II.pdf"-->
+
+<!ELEMENT TEI (header, facsimile?, testo+)>
+
+<!ELEMENT header (#PCDATA)>
+<!ELEMENT facsimile (#PCDATA)>
+<!ELEMENT testo (#PCDATA | <seg>)*> <!--testo è mixed content, composto da occorrenze di testo e tag <seg>-->
+<!ELEMENT seg (#PCDATA)> <!--ho inferito che si trattasse di testo in quanto non ci sono altre richieste su eventuali figli "element"-->
+
+<!ATTLIST header type CDATA #FIXED "intestazione">
+<!ATTLIST header lang NMTOKEN #IMPLIED>
+<!ATTLIST facsimile source #REQUIRED>
+<!ATTLIST facsimile ref IDREFS #IMPLIED>
+<!ATTLIST testo id ID #REQUIRED>
+<!ATTLIST testo type CDATA #IMPLIED> 
+<!--ho specificato per ogni elemento gli attributi richiesti con i valori di tipo, stato e default richiesti-->

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- esercizio di pagina 47 del file "CdT_24_25_TEI_editorial__2025.pdf"-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Codifica TEI di "cdexDamsHist003"</title>
+        <respStmt>
+          <resp>Codifica TEI a cura di</resp>
+          <persName>Francesco Tozzi</persName>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Università di Pisa</publisher>
+      </publicationStmt>
+      <sourceDesc>
+      <bibl>
+        <publisher>sito del CDEC</publisher>
+      </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div>
+        <s><date when="1920-04-25">25 Aprile 1920</date> - <date when="1940-07-29">29 luglio 1940</date> - <measure unit="year" value="20">vent'anni</measure>: 
+        <s>appena il limitare della vita. ma breve e lumino-</s>
+        <s>sa veramente come dice il racconto <gap reason="illegible"/></s>
+        <s>promessa, speranza, <gap reason="illegible"/>. Credete a chi</s>
+        <s>l'ha conosciuto nella prima infanzia, di <gap reason="illegible"/></s>
+        <s>se anche i ricordi di quei primi anni, felici.</s>
+        <s><gap reason="illegible"/></s>
+      </div>
+    </body>
+  </text>
+</TEI>

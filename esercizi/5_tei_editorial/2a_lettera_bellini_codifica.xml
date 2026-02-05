@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- esercizio di pagina 95 del file "CdT_24_25_TEI_editorial__2025.pdf"-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Lettera a Bellini - edizione digitale (codifica TEI)</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Archivio storico</publisher>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Lettera manoscritta</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <facsimile>
+      <surface xml:id="surface_1">
+        <graphic url='2b_lettera_bellini.jpg' width='758.4px' height='512.4px' />
+          <zone xml:id="verde" ulx="9" uly="13" lrx="367" lry="81" />
+          <zone xml:id="celeste" ulx="9" uly="87" lrx="369" lry="292" />
+          <zone xml:id="blu" ulx="9" uly="300" lrx="368" lry="499" />
+          <zone xml:id="rosso" ulx="375" uly="11" lrx="746" lry="65" />
+          <zone xml:id="arancione" ulx="406" uly="71" lrx="740" lry="489" />
+          <zone xml:id="fucsia" ulx="570" uly="457" lrx="740" lry="500" />
+      </surface>
+  </facsimile>
+
+  <text>
+    <body>
+      <div type="letter">
+
+        <opener>
+          <p facs="#rosso"><gap reason="illegible"/></p>
+        </opener>
+
+        <p facs="#arancione">Mio caro Bellini,
+          <lb n="1"/>Avendo<gap reason="illegible"/>
+          <lb n="2"/>e mancando in ogni <gap reason="illegible"/>
+          <lb n="3"/><gap reason="illegible"/>, desidererei che tu
+          <lb n="4"/>t'<gap reason="illegible"/> a venire a 
+          <lb n="5"/><gap reason="illegible"/>
+          <lb n="6"/><gap reason="illegible"/> la 
+          <lb n="7"/><gap reason="illegible"/>
+          <lb/>T'aspetto in qual giorno 
+          <lb/>ed in qual'ora ormai
+        </p>
+
+        <closer>
+          <signed facs="#rosa"><gap reason="illegible"/></signed>
+        </closer>
+
+        <div type="envelope">
+          <address facs="#celeste">
+            <addrLine>à Monsieur</addrLine>
+            <addrLine>Monsieur le Comte <gap reason="illegible"/></addrLine>
+            <addrLine>rue Lepage de petit Genf</addrLine>
+            <addrLine>à Paris</addrLine>
+          </address>
+          <note type="sender" facs="#blu">lettera del Bellini<gap reason="illegible"/></note>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

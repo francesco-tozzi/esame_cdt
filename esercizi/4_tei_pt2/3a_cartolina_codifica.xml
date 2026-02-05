@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- esercizio di pagina 52 del file "CdT_24_25_lez_TEI__2025_PART-II.pdf"-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Cartolina Codifica TEI</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Codifica TEI di una cartolina per esercizio del corso universitario di Codifica di Testi.</p>
+      </publicationStmt>
+      <sourceDesc>
+    <!--per la descrizione di una cartolina è appropriato usare manuscript description-->
+            <msDesc>
+                <msIdentifier>
+                    <country>Italia</country>
+                    <settlement>Oriolo Romano (VT)</settlement>
+                    <repository>Collezione privata</repository>
+                    <idno>Cartolina_01</idno> 
+                </msIdentifier>
+
+                <history>
+                    <origin>
+                        <p>La cartolina è stata spedita da <placeName>Oriolo Romano (VT)</placeName>.</p>
+                        <date when="1981-04-22">22 Aprile '81</date>
+                    </origin>
+                </history>
+
+            </msDesc>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+        <div type="postcard">
+            
+            <div type="message">
+                <p>
+                    Cari saluti
+                    <lb/> da <persName>Fabio Cerofogli</persName>
+                </p>
+                
+                <p>
+                    <hi rend="underline">FORZA LAZIO!!!</hi>
+                </p>
+            </div>
+
+            <div type="destination">
+                <address>
+                    <addrLine>
+                        <choice>
+                            <abbr>SIG.<hi rend="superscript">INO</hi></abbr>
+                            <expan>SIG<ex>NOR</ex>INO</expan>
+                        </choice>
+                        <persName>FRANCESCO FERRI</persName>
+                    </addrLine>
+                    
+                    <addrLine>VIA CLAUDIA 61</addrLine>
+                    
+                    <addrLine>
+                        <placeName>
+                            <settlement>ORIOLO ROMANO</settlement>
+                            <postCode>01010</postCode>
+                        </placeName>
+                    </addrLine>
+                    
+                    <addrLine>
+                        PROV. <placeName>VITERBO</placeName>
+                    </addrLine>
+                </address>
+            </div>
+            
+        </div>
+    </body>
+  </text>
+</TEI>

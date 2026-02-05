@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- esercizio di pagina 52 del file "CdT_24_25_lez_TEI__2025_PART-II.pdf"-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>L’ingegneria salverà il mondo? - edizione digitale (codifica TEI)</title>
+      </titleStmt>
+      <publicationStmt>
+        <p>Codifica TEI di un articolo di rivista per esercizio del corso universitario di Codifica di Testi.</p>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+            <analytic>
+                <title>L’ingegneria salverà il mondo?</title>
+                <author>Redazione de "Il Giornale dell’Ingegnere"</author>
+            </analytic>
+            <monogr>
+                <title>Il Giornale dell’Ingegnere</title>
+                <date when="2017-12">Dicembre 2017</date>
+            </monogr>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+
+  <text>
+    <body>
+      <div type="article" xml:lang="it">
+        <head>World Engineering Forum 2017</head>
+        <head type="main">L’ingegneria salverà il mondo?</head>
+        
+        <byline>a cura della redazione</byline>
+
+        <p><quote>Salvaguardare l’eredità dell’umanità: una grande sfida per gli ingegneri</quote> è stato il tema principale del <orgName>World Engineering Forum</orgName> che si è svolto a <name type="place">Roma</name> <date from="2017-11-27" to="2017-11-29">dal 27 al 29 novembre</date>, con l’obiettivo di guidare la società verso la tutela del patrimonio dell’umanità, attraverso il ricorso a strumenti indispensabili quali l’innovazione e la creatività.</p>
+        <p>Durante i lavori sono stati affrontati temi complessi legati alla conservazione dell’ambiente naturale e umano, alle soluzioni per prevenire i cambiamenti climatici, alla progettazione di nuovi spazi urbani e conservazione degli edifici, alla prevenzione dal rischio, fino alle tecnologie per la conservazione e per la tutela del patrimonio artistico-architettonico-monumentale e alle smart technologies per lo sviluppo sostenibile.</p>
+        <note>Il testo prosegue a pagina 2.</note>
+      </div>
+    </body>
+  </text>
+</TEI>

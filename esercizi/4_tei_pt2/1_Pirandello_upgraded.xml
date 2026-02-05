@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- esercizio di pagina 37 del file "CdT_24_25_lez_TEI__2025_PART-II.pdf"-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader> <!-- utilizzo la struttura minima per il teiHeader, con le informazioni essenziali-->
+    <fileDesc>
+      <titleStmt> 
+        <title>Il fu Mattia Pascal. Premessa (Codifica TEI)</title> <!--titolo del file-->
+      </titleStmt>
+      <publicationStmt> <!-- informazioni sulla pubblicazione -->
+        <p>Codifica TEI della Premessa de "Il fu Mattia Pascal" per esercizio del corso universitario di Codifica di Testi.</p>
+      </publicationStmt>
+      <sourceDesc> <!-- descrizione della fonte originaria -->
+        <p>Luigi Pirandello, Il fu Mattia Pascal, Premessa.</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader> 
+
+  <text>
+    <body>
+      <div type="novel" xml:lang="it">
+        <div type="preface" n="1"> <!--specifico n="1" in quanto in questa opera ce ne sono due di premesse-->
+          <head>I. Premessa</head>  
+          <p>Una delle poche cose, anzi forse la sola ch’io sapessi di certo era questa: che mi chiamavo <persName xml:id="MP">Mattia Pascal</persName>. E me ne approfittavo. Ogni qual volta qualcuno de’ miei <rs type="person">amici<rs> o <rs type="person">conoscenti</rs> dimostrava d’aver perduto il senno fino al punto di venire da me per qualche consiglio o suggerimento, mi stringevo nelle spalle, socchiudevo gli occhi e gli rispondevo: — Io mi chiamo <persName ref="#MP">Mattia Pascal</persName>. — Grazie, caro. Questo lo so. — E ti par poco?</p>
+          <p>Non pareva molto, per dir la verità, neanche a me. Ma ignoravo allora che cosa volesse dire il non sapere neppur questo, il non poter più rispondere, cioè, come prima, all’occorrenza: — Io mi chiamo <persName ref="#MP">Mattia Pascal</persName>.</p>          
+          <p>Qualcuno vorrà bene compiangermi (costa così poco), immaginando l’atroce cordoglio d’un disgraziato, al quale avvenga di scoprire tutt’a un tratto che.... sì, niente, insomma: nè <rs type="person">padre</rs>, nè <rs type="person">madre</rs>, nè come fu o come non fu; e vorrà pur bene indignarsi (costa anche meno) della corruzione dei costumi, e de’ vizii, e della tristezza dei tempi, che di tanto male possono esser cagione a un povero innocente.</p>
+          <p>Ebbene, si accomodi. Ma è mio dovere avvertirlo che non si tratta propriamente di questo. Potrei qui esporre, di fatti, in un <term xml:id="t_albero">albero genealogico</term><note>Rappresentazione grafica delle relazioni familiari e della discendenza.</note>, l’origine e la discendenza della mia famiglia e dimostrare come qualmente non solo ho conosciuto mio <rs type="person">padre</rs> e mia <rs type="person">madre</rs>, ma e gli <rs type="person">antenati</rs> miei e le loro azioni, in un lungo decorso di tempo, non tutte veramente lodevoli.</p>
+          <p>E allora?</p>          
+          <p>Ecco: il mio caso è assai più strano e diverso; tanto diverso e strano che mi faccio a narrarlo.</p>          
+          <p>Fui, per circa due anni, non so se più cacciatore di topi che guardiano di libri nella biblioteca che un <persName xml:id="MB">Monsignor Boccamazza</persName>, nel 1803, volle lasciar morendo al nostro Comune. È ben chiaro che questo <rs ref="#MB">Monsignore</rs> dovette conoscer poco l’indole e le abitudini de’ suoi <rs type="person">concittadini</rs>; o forse sperò che il suo lascito dovesse col tempo e con la comodità accendere nel loro animo l’amore per lo studio. Finora, ne posso rendere testimonianza, non si è acceso: e questo dico in lode de’ miei <rs type="person">concittadini</rs>. Del dono anzi il Comune si dimostrò così poco grato al <rs ref="#MB">Boccamazza</rs>, che non volle neppure erigergli un <term xml:id="t_mezzo">mezzobusto</term><note>Scultura che raffigura la parte superiore del corpo umano (testa, spalle e petto).</note> pur che fosse, e i libri lasciò per molti e molti anni accatastati in un vasto e umido magazzino, donde poi li trasse, pensate voi in quale stato, per allogarli nella chiesetta fuori mano di <placeName>Santa Maria Liberale</placeName>, non so per qual ragione sconsacrata. Qua li affidò, senz’alcun discernimento, a titolo di beneficio, e come <term xml:id="t_sin">sinecura</term><note>Beneficio ecclesiastico senza cura di anime; per estensione, impiego che richiede poca o nessuna fatica.</note>, a qualche sfaccendato ben protetto il quale, per due lire al giorno, stando a guardarli, o anche senza guardarli affatto, ne avesse sopportato per alcune ore il tanfo della muffa e del vecchiume.</p>
+          <p>Tal sorte toccò anche a me; e fin dal primo giorno io concepii così misera stima dei libri, sieno essi a stampa o manoscritti (come alcuni antichissimi della nostra biblioteca), che ora non mi sarei mai e poi mai messo a scrivere, se, come ho detto, non stimassi davvero strano il mio caso e tale da poter servire d’ammaestramento a qualche curioso <rs type="person">lettore</rs>, che per avventura, riducendosi finalmente a effetto l’antica speranza della buon’anima di <rs ref="#MB">Monsignor Boccamazza</rs>, capitasse in questa biblioteca, a cui io lascio questo mio manoscritto, con l’obbligo però che nessuno possa aprirlo se non cinquant’anni dopo la mia terza, ultima e definitiva morte.</p>
+          <p>Giacchè, per il momento (e Dio sa quanto me ne duole), io sono morto, sì, già due volte, ma la prima per errore, e la seconda… sentirete.</p>
+        </div>
+      </div>
+    </body>
+
+    <back> <!--inserisco nel back, dopo il body, il glossario (strutturato come lista)-->
+      <div type="glossary">
+        <head>Glossario</head> <!--intestazione della lista-->
+        <list type="gloss"> <!--lista con all'interno etichette (label) associate ai termini di cui si fornisce relativa spiegazione (ogni item è una glossa)-->
+          <label>Sinecura</label>
+          <item>
+             <gloss target="#t_sin">Beneficio ecclesiastico senza cura di anime; per estensione, impiego che richiede poca o nessuna fatica.</gloss>
+          </item>
+          
+          <label>Mezzobusto</label>
+          <item>
+            <gloss target="#t_mezzo">Scultura che raffigura la parte superiore del corpo umano (testa, spalle e petto).</gloss>
+          </item>
+
+          <label>Albero Genealogico</label>
+          <item>
+             <gloss target="#t_albero">Rappresentazione grafica delle relazioni familiari e della discendenza.</gloss>
+          </item>
+        </list>
+      </div>
+    </back>
+  </text>
+</TEI>

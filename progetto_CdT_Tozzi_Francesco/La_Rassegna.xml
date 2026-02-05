@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?> <!--dichiarazione XML-->
+<?xml-stylesheet type="text/xsl" href="transformer.xsl"?> <!--indicazione del foglio di stile XSLT da applicare al documento XML-->
+<!DOCTYPE TEI SYSTEM "tei_all.dtd"> <!--dichiarazione del tipo di documento TEI e della relativa DTD esterna-->
+<TEI xml:lang="it" xmlns="http://www.tei-c.org/ns/1.0"> <!--elemento radice TEI: lingua e namespace-->
+
+   <!--header che contiene le informazioni meta-testuali-->
+   <teiHeader>
+      <!--descrizione del file che sta venendo creato-->
+      <fileDesc> 
+         
+         <!--dichiarazione del titolo e dell'autore della codifica digitale TEI-->
+         <titleStmt> 
+            <title>La Rassegna Settimanale - edizione digitale (codifica TEI)</title>
+            <respStmt>
+               <resp>Codifica digitale TEI (P5) a cura di:</resp>
+               <persName xml:id="Francesco_Tozzi" ref="https://github.com/francesco-tozzi">Francesco Tozzi</persName>
+            </respStmt>
+         </titleStmt>
+
+         <!--dichiarazione delle informazioni editoriali del file-->
+         <publicationStmt>
+            <publisher>Università di Pisa</publisher>
+				<pubPlace>Pisa</pubPlace>
+				<date>2026</date>
+         </publicationStmt>
+
+         <!--descrizione delle informazioni sulla fonte da cui è stato tratto il testo-->
+         <sourceDesc>
+
+            <!--poiché articoli, bibliografia e notizie sono tratti da parti diverse di vari volumi ho preferito usare una lista-->
+            <listBibl>
+               
+               <!--riferimento bibliografico completo dell'articolo 1-->
+               <biblStruct xml:id="articolo_1_bibl">
+                  <!--per la descrizione della specifica parte che ho codificato (l'articolo 1)-->
+                  <analytic>
+                     <title level="a">SAPER LEGGERE.</title>
+                     <author>
+                        <name>T.</name> 
+                     </author>
+                  </analytic>
+                  <!--per la descrizione della pubblicazione da cui è tratto l'articolo-->
+                  <monogr>
+                     <title level="j">La Rassegna settimanale di politica, scienze, lettere ed arti</title>
+                     <respStmt>
+                        <resp>Proprietari e direttori</resp>
+                        <name>Leopoldo Franchetti</name>
+                        <name>Sydney Sonnino</name>
+                     </respStmt>
+                     <imprint>
+                        <publisher>Casa editrice Barbera</publisher>
+                        <pubPlace>Roma</pubPlace>
+                        <date when="1881-04-17">17 aprile 1881</date> 
+                        <biblScope unit="volume">7</biblScope>
+                        <biblScope unit="issue">172</biblScope>
+                        <biblScope unit="page" from="251" to="254">251-254</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+
+               <!--riferimento bibliografico completo dell'articolo 2-->
+               <biblStruct xml:id="articolo_2_bibl">
+                  <!--per la descrizione della specifica parte che ho codificato (l'articolo 2)-->
+                  <analytic>
+                     <title level="a">LA LEGGE SUL LAVORO DEI FANCIULLI.</title>
+                     <title level="a" type="sub">CORRISPONDENZA DAL VENETO.</title>
+                  </analytic> 
+                  <!--per la descrizione della pubblicazione da cui è tratto l'articolo-->
+                  <monogr>
+                     <title level="j">La Rassegna settimanale di politica, scienze, lettere ed arti</title>
+                     <imprint>
+                        <publisher>Casa editrice Barbera</publisher>
+                        <pubPlace>Roma</pubPlace>
+                        <date when="1880-11-28">28 novembre 1880</date>
+                        <biblScope unit="volume">6</biblScope>
+                        <biblScope unit="issue">152</biblScope>
+                        <biblScope unit="page">341</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+               
+               <!--riferimento bibliografico completo della sezione Bibliografia-->
+               <biblStruct xml:id="sezione_bibliografia_bibl">
+                  <!--per la descrizione della specifica parte che ho codificato (la sezione Bibliografia)-->
+                  <analytic>
+                     <title level="a">BIBLIOGRAFIA.</title> 
+                  </analytic>
+                  <!--per la descrizione della pubblicazione da cui è tratta la sezione Bibliografia-->
+                  <monogr>
+                     <title level="j">La Rassegna settimanale di politica, scienze, lettere ed arti</title>
+                     <imprint>
+                        <publisher>Casa editrice Barbera</publisher>
+                        <pubPlace>Roma</pubPlace>
+                        <date when="1880-10-17">17 ottobre 1880</date>
+                        <biblScope unit="volume">6</biblScope>
+                        <biblScope unit="issue">146</biblScope>
+                        <biblScope unit="page" from="253" to="254">253-254</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+
+               <!--riferimento bibliografico completo della sezione Notizie-->
+               <biblStruct xml:id="sezione_notizie_bibl">
+                  <!--per la descrizione della specifica parte che ho codificato (la sezione Notizie)-->
+                  <analytic>
+                     <title level="a">NOTIZIE.</title>
+                  </analytic>
+                  <!--per la descrizione della pubblicazione da cui è tratta la sezione Notizie-->
+                  <monogr>
+                     <title level="j">La Rassegna settimanale di politica, scienze, lettere ed arti</title>
+                     <imprint>
+                        <publisher>Casa editrice Barbera</publisher>
+                        <pubPlace>Roma</pubPlace>
+                        <date when="1880-01-11">11 gennaio 1880</date> 
+                        <biblScope unit="volume">5</biblScope>
+                        <biblScope unit="issue">106</biblScope>
+                        <biblScope unit="page">40</biblScope>
+                     </imprint>
+                  </monogr>
+               </biblStruct>
+
+            </listBibl>
+         </sourceDesc>
+      </fileDesc>
+
+      <!--descrizione delle modalità di codifica del testo-->
+      <encodingDesc>
+			<projectDesc>
+				<p>Questo progetto è stato realizzato per l’esame di <hi rend="bold">Codifica di Testi</hi>. Vari estratti della rivista <hi rend="bold">"<hi rend="italic">La Rassegna Settimanale</hi>"</hi> sono stati codificati in <hi rend="bold">TEI P5</hi>, mantenendone fedelmente la struttura e offrendo varie possibilità di analisi.</p>
+			</projectDesc>
+      
+			<editorialDecl>
+				<normalization>
+					<p>Ho normalizzato il testo modernizzando le parole ad oggi definite letterarie o arcaiche con termini dell'italiano standard attuale e ho espanso le abbreviazioni. In entrambi i casi ho lasciato sul testo la forma originale, ma ho dato anche la possibilità di rendere esplicita la normalizzazione.</p>
+				</normalization>
+				<correction>
+					<p>Ho corretto gli errori tipografici (accenti e mancati spazi), anche in questo caso lasciando sul testo la forma originale e permettendo di esplicitare le correzioni.</p>
+				</correction>
+			</editorialDecl>
+      </encodingDesc>
+   </teiHeader>
+
+   <!--mappa delle zone disposte sulla superficie di ogni pagina della fonte originale-->
+   <facsimile>
+
+      <!--ARTICOLO 1: SAPER LEGGERE.-->
+
+      <!--saper_leggere_1.png-->
+      <surface n="1.1" xml:id="surface_art_1_1">
+         <graphic url='img/saper_leggere_1.png' width='1598.4px' height='2263.4px' />
+            <zone xml:id="art1_title" ulx="817" uly="1895" lrx="1498" lry="1942" />
+            <zone xml:id="art1_p1_beg" ulx="817" uly="1940" lrx="1498" lry="2046" /> 
+      </surface>
+
+      <!--saper_leggere_2.png-->
+      <surface n="1.2" xml:id="surface_art_1_2">
+         <graphic url='img/saper_leggere_2.png' width='1586.4px' height='2263.4px' />
+            <zone xml:id="art1_p1_end" ulx="130" uly="131" lrx="815" lry="294" />
+            <zone xml:id="art1_p2" ulx="130" uly="295" lrx="816" lry="351" />
+            <zone xml:id="art1_p3" ulx="130" uly="352" lrx="818" lry="380" />
+            <zone xml:id="art1_p4" ulx="129" uly="381" lrx="817" lry="497" />
+            <zone xml:id="art1_p5" ulx="129" uly="497" lrx="816" lry="559" />
+            <zone xml:id="art1_p6" ulx="128" uly="553" lrx="817" lry="1070" />
+            <zone xml:id="art1_p7" ulx="127" uly="1071" lrx="819" lry="1933" />
+            <zone xml:id="art1_p8_beg" ulx="126" uly="1927" lrx="819" lry="2068" />
+            <zone xml:id="art1_p8_end" ulx="816" uly="137" lrx="1513" lry="1497" />
+            <zone xml:id="art1_p9_beg" ulx="818" uly="1498" lrx="1510" lry="2070" />
+      </surface>
+
+      <!--saper_leggere_3.png-->
+      <surface n="1.3" xml:id="surface_art_1_3">
+         <graphic url='img/saper_leggere_3.png' width='1573.4px' height='2257.4px' />
+            <zone xml:id="art1_p9_end" ulx="129" uly="132" lrx="814" lry="229" />
+            <zone xml:id="art1_p10" ulx="129" uly="228" lrx="823" lry="1607" />
+            <zone xml:id="art1_p11_beg" ulx="128" uly="1602" lrx="823" lry="2054" />
+            <zone xml:id="art1_p11_end" ulx="814" uly="132" lrx="1503" lry="740" />
+            <zone xml:id="art1_p12" ulx="823" uly="740" lrx="1503" lry="771" />
+            <zone xml:id="art1_p13" ulx="823" uly="772" lrx="1505" lry="857" />
+            <zone xml:id="art1_p14_beg" ulx="822" uly="856" lrx="1517" lry="2054" />
+      </surface>
+
+       <!--saper_leggere_4.png-->
+      <surface n="1.4" xml:id="surface_art_1_4">
+         <graphic url='img/saper_leggere_4.png' width='1586.4px' height='2269.4px' />
+            <zone xml:id="art1_p14_end" ulx="94" uly="146" lrx="775" lry="1291" />
+            <zone xml:id="art1_p15_beg" ulx="95" uly="1292" lrx="772" lry="2064" />
+            <zone xml:id="art1_p15_end" ulx="781" uly="154" lrx="1464" lry="1087" />
+            <zone xml:id="art1_signature" ulx="1389" uly="1068" lrx="1430" lry="1097" />         
+      </surface>
+
+       <!--ARTICOLO 2: LEGGE SUL LAVORO DEI FANCIULLI-->
+
+       <!--legge_lavoro_fanciulli_1.png-->
+      <surface n="2" xml:id="surface_art_2">
+         <graphic url='img/legge_lavoro_fanciulli_1.png' width='1516.4px' height='2271.4px' />
+            <zone xml:id="art2_title" ulx="759" uly="945" lrx="1443" lry="980" />
+            <zone xml:id="art2_subtitle" ulx="759" uly="982" lrx="1444" lry="1009" />
+            <zone xml:id="art2_p1" ulx="759" uly="1012" lrx="1444" lry="1525" />
+            <zone xml:id="art2_p2" ulx="759" uly="1525" lrx="1450" lry="2095" />
+      </surface>
+
+      <!--BIBLIOGRAFIA-->
+
+      <!--bibliografia_1.png-->
+      <surface n="3.1" xml:id="surface_biblio_1">
+         <graphic url='img/bibliografia_1.png' width='1498.4px' height='2287.4px' />
+            <zone xml:id="biblio_title" ulx="748" uly="418" lrx="1441" lry="466" />
+            <zone xml:id="biblio_1_bibl" ulx="764" uly="1804" lrx="1451" lry="1860" />
+            <zone xml:id="biblio_1_p1_beg" ulx="765" uly="1869" lrx="1454" lry="2040" />
+      </surface>
+
+      <!--bibliografia_2.png-->
+      <surface n="3.2" xml:id="surface_biblio_2">
+         <graphic url='img/bibliografia_2.png' width='1513.4px' height='2298.4px' />
+            <zone xml:id="biblio_1_p1_end" ulx="76" uly="120" lrx="757" lry="983" />
+            <zone xml:id="biblio_2_bibl" ulx="75" uly="1009" lrx="755" lry="1080" />
+            <zone xml:id="biblio_2_p1" ulx="75" uly="1081" lrx="751" lry="1345" />
+            <zone xml:id="biblio_2_p2" ulx="71" uly="1346" lrx="750" lry="1489" />
+            <zone xml:id="biblio_2_p3" ulx="70" uly="1489" lrx="748" lry="1574" />
+            <zone xml:id="biblio_2_p4" ulx="70" uly="1574" lrx="747" lry="1664" />
+            <zone xml:id="biblio_2_p5" ulx="71" uly="1662" lrx="747" lry="1720" />
+      </surface>
+
+      <!--NOTIZIE-->
+
+      <!--notizie_1.png-->
+      <surface n="4" xml:id="surface_notizie">
+         <graphic url='img/notizie_1.png' width='1640.4px' height='2266.4px' />
+            <zone xml:id="notizie_title" ulx="852" uly="1337" lrx="1542" lry="1376" />
+            <zone xml:id="notizie_div1" ulx="851" uly="1378" lrx="1541" lry="1560" />
+            <zone xml:id="notizie_div2" ulx="852" uly="1561" lrx="1543" lry="1657" />
+      </surface>
+
+   </facsimile>
+
+   <!--parte testuale-->
+   <text>
+      <!--poiché ho fatto la codifica di parti diverse di volumi diversi della Rassegna, ho preferito inserire i singoli testi all'interno di un elemento <group> per marcare questa eterogeneità-->
+      <group>
+
+         <!--primo testo: ARTICOLO 1-->
+         <text>
+            <body>
+               <div type="article" xml:id="articolo_1" source="#articolo_1_bibl">
+
+                  <pb n="251" facs="#surface_art_1_1"/>
+                  <cb n="2"/>
+
+                  <head facs="#art1_title">SAPER LEGGERE.</head>
+
+                  <p facs="#art1_p1_beg #art1_p1_end">
+                     <lb n="1"/>Me ne rammento come se fosse ieri. Il moscato civet-
+                     <lb n="2" break="no"/>tava tra i morbidi <distinct type="literary" xml:id="pampani">pampani</distinct> al sole; io, piluccando un grap-
+                     <lb n="3" break="no"/>polo, guardavo il <rs type="person">bambino</rs> del <rs type="person" role="winegrower" ref="#winegrower"><choice><orig>vignaiuolo</orig><reg>vignaiolo</reg></choice></rs>, che, venuto
+                     <lb n="4"/>dietro al <rs type="person" ref="#winegrower">babbo</rs> tenendoglisi aggrappato ai calzoni, non mi
+
+                     <pb n="252" facs="#surface_art_1_2"/>
+                     <cb n="1"/>
+
+                     <lb n="5"/>levava gli occhi di dosso: aveva, in quel bel faccione color
+                     <lb n="6"/>terra cotta, un’aria tra il curioso e il timido, come se di-
+                     <lb n="7" break="no"/>cesse <q type="hypothetical_speech">« sono uno sfacciatello e... ve ne chiedo scusa »</q> e 
+                     <lb n="8"/>tra le labbra semiaperte i bianchissimi denti lodavano le
+                     <lb n="9"/>qualità dentifricie della polenta. 
+                  </p>
+                  <p facs="#art1_p2">
+                     <lb n="10"/>— <said who="#T_author_article_1" toWhom="#winegrower" aloud="true" direct="true">Lo mandate a scuola codesto bambino?</said> chiesi, tra
+                     <lb n="11"/>un chicco e l’altro. 
+                  </p>
+                  <p facs="#art1_p3">
+                     <lb n="12"/>— <said who="#winegrower" toWhom="#T_author_article_1" aloud="true" direct="true">Oh! sissignore, bisogna che impari a leggere...</said> 
+                  </p>
+                  <p facs="#art1_p4">
+                     <lb n="13"/>— <said who="#T_author_article_1" toWhom="#winegrower" aloud="true" direct="true">Sicuro</said>, diss’io: e, poiché figuravo di rappresentare le 
+                     <lb n="14"/>vantate <rs type="group" subtype="social_class">classi dirigenti</rs>, stavo per continuare, anche in quella 
+                     <lb n="15"/>circostanza e in quell’atteggiamento poco maestosi, con una 
+                     <lb n="16"/>tiratina sulla necessità dell'istruzione; ma il <rs type="person" ref="#winegrower"><distinct type="literary" xml:id="villano">villano</distinct></rs> riprese: 
+                  </p>
+                  <p facs="#art1_p5">
+                     <lb n="17"/>— <said who="#winegrower" toWhom="#T_author_article_1" aloud="true" direct="true">Imparando a leggere s’impara a conoscere i <rs type="object" subtype="money">bi-
+                     <lb n="18" break="no"/>glietti</rs>.</said>
+                  </p>
+                  <p facs="#art1_p6">
+                     <lb n="19"/>Le mie considerazioni mi morirono sul labbro a quella 
+                     <lb n="20"/>curiosa trovata: la quale tuttavia mi fece pensare. In fondo, 
+                     <lb n="21"/><rs type="person" ref="#winegrower">quel brav’uomo</rs> aveva scavato un lucidissimo criterio della 
+                     <lb n="22"/>natura, dello scopo, dell’estensione di quel rispettabile sa-
+                     <lb n="23" break="no"/>pere che è il saper leggere. Gente, pensavo, con un qual-
+                     <lb n="24" break="no"/>che lontano sospetto che la procreazione della prole non 
+                     <lb n="25"/>finisca quando il bambino è balzato fuori del seno materno, 
+                     <lb n="26"/>ce n’è molta; e si danno il pensiero di mettere i figliuoli 
+                     <lb n="27"/><hi rend="italic">a imparare a leggere e scrivere</hi>: ai nostri giorni, si dice, è 
+                     <lb n="28"/>indispensabile; se <date when="1831" precision="medium">cinquant’anni fa</date>, <date when="1851" precision="medium">trent’anni fa</date>, ci fossero <!--ho calcolato le due <date> considerando come riferimento l'anno di pubblicazione dell'articolo (1881)-->
+                     <lb n="29"/>state <hi rend="italic">le <rs type="org" subtype="educational">scuole</rs></hi>, come ci sono <date when="1881">ora</date>, i babbi sarebbero certa-
+                     <lb n="30" break="no"/>mente <choice><orig>doventati</orig><reg>diventati</reg></choice> ...; chi sa cosa sarebbero <choice><orig>doventati</orig><reg>diventati</reg></choice> ! Dun-
+                     <lb n="31" break="no"/>que almeno diventino i figli; e quindi comincino dal saper 
+                     <lb n="32"/>leggere e scrivere. Ma di codesto sapere in che cosa con-
+                     <lb n="33" break="no"/>sista, che portata abbia, che cosa se ne vogliano fare, quanti 
+                     <lb n="34"/>sarebbero in grado di dirlo? quanti ne hanno un’idea che 
+                     <lb n="35"/>valga quella meschina ma concreta del <rs type="person" ref="#winegrower">mio povero vi-
+                     <lb n="36" break="no"/>gnaiuolo</rs>?
+                  </p>
+                  <p facs="#art1_p7">
+                     <lb n="37"/>Cosa vuol dire saper leggere? Lascio da parte lo scri-
+                     <lb n="38" break="no"/>vere; molta gente sarebbe meglio che non sapesse, a quel 
+                     <lb n="39"/>suo modo, scrivere; ne sanno appena tanto da <hi rend="italic">fare il suo 
+                     <lb n="40"/>nome</hi> sotto <rs type="object" subtype="legal_document">contratti</rs> o <rs type="object" subtype="legal_document">dichiarazioni</rs> che leggere veramente 
+                     <lb n="41"/>non sanno e tra le cui righe è talvolta appiattato un in-
+                     <lb n="42" break="no"/>ganno; mentre, se non sapessero, c’entrerebbero di mezzo 
+                     <lb n="43"/>i quattr’occhi del <rs type="person" role="notary" xml:id="notary">notaio</rs>, il quale anche essendo un mode-
+                     <lb n="44" break="no"/>stissimo <rs type="person" ref="#notary">gregario</rs> ignaro di tutta la poesia versata nei con-
+                     <lb n="45" break="no"/>sigli della <rs type="law" subtype="code">codificazione francese</rs> sulla nobiltà della sua 
+                     <lb n="46"/>professione, impedirebbe probabilmente che si facessero 
+                     <lb n="47"/>intrighi. Lasciamo dunque da <distinct type="archaic" xml:id="banda">banda</distinct> lo scrivere, che poi 
+                     <lb n="48"/>psicologicamente e fisiologicamente è poco più che il reci-
+                     <lb n="49" break="no"/>proco dell’operazione del leggere. Ma almeno si sapesse leg-
+                     <lb n="50" break="no"/>gere! Perbacco; dopo essere stati inchiodati a un banco, con il 
+                     <lb n="51"/>ditino su quel <ref target="#sillabario"><distinct type="morphology" xml:id="librettucciaccio">librettucciaccio</distinct></ref> così umile e così importante, 
+                     <lb n="52"/>che si chiama il <rs type="work" subtype="textbook" xml:id="sillabario">sillabario</rs>, per dare la caccia a cinque <seg type="rhetorical_figure" subtype="personification">so-
+                     <lb n="53" break="no"/>relle <term type="linguistics">vocali</term></seg> e venti... <distinct type="metaphorical" xml:id="strumentali">strumentali</distinct> una più buffa dell’altra, 
+                     <lb n="54"/>che prese una per una sono gemiti, guaiti, gracidii, ulu-
+                     <lb n="55" break="no"/>lati, ronzii, sibili <choice><abbr>ecc.</abbr><expan>eccetera</expan></choice>, e messe insieme si chiamano olim-
+                     <lb n="56" break="no"/>picamente l’umano linguaggio; dopo aver soffocato in questa 
+                     <lb n="57"/>oscura abnegazione tanti desiderii di corse o di capriole, 
+                     <lb n="58"/>tante fantasiette birichine, almeno si sapesse chiaramente 
+                     <lb n="59"/>ed esattamente quanto vale il laborioso acquisto, come 
+                     <lb n="60"/>s'impiega, che frutti ci può dare! Per chi legge, in fin 
+                     <lb n="61"/><choice><orig>de’</orig><reg>dei</reg></choice> conti, la carta stampata piglia facilmente un gran posto 
+                     <lb n="62"/>nella sua vita; è quella che lo tira fuori dai quattro muri 
+                     <lb n="63"/>della sua casa, dalla cinta della sua città, che lo scioglie 
+                     <lb n="64"/>dalla data della sua nascita, lo riposa dal pensiero dei de-
+                     <lb n="65" break="no"/>biti, e gli allunga il tiro di <seg type="rhetorical_figure" subtype="metaphor">quel caro cannocchiale che si 
+                     <lb n="66"/>chiama la speranza</seg>!
+                  </p>
+                  <p facs="#art1_p8_beg #art1_p8_end">
+                     <lb n="67"/>So di un <rs type="person" role="teacher">professore di <rs type="org" subtype="educational">liceo</rs></rs>, il quale usava, e forse usa 
+                     <lb n="68"/>ancora, obbligare i suoi <rs type="person" role="student">alunni</rs> a <rs type="pedagogy" xml:id="es_lettura">questo esercizio</rs>; leggere 
+                     <lb n="69"/>un passo di un autore; poi, chiuso il libro, ripetere il pen-
+                     <lb n="70" break="no"/>siero dell’autore con altre parole. Ai miei tempi, che non 
+                     <lb n="71"/>sono lontani, quasi sempre l’<rs type="person" role="student">alunno</rs> o ripeteva a memoria 
+
+                     <cb n="2"/>
+
+                     <lb n="72"/>le parole stesse dell’autore, o rimaneva muto; trovare uno 
+                     <lb n="73"/>che sapesse esporre di suo, sia pure in forma imperfetta, 
+                     <lb n="74"/>il pensiero dell’autore in modo da mostrare che gli era en-
+                     <lb n="75" break="no"/>trato in mente, era una faccenda seria. Or se l’<placeName ref="#Italia_1">Italia</placeName> diven-
+                     <lb n="76" break="no"/>tasse tutta un <rs type="org" subtype="educational">liceo</rs> e si mettessero nei banchi anche gli 
+                     <lb n="77"/><rs type="person_group">uomini grandi e grossi</rs> con tanto di barba, e si obbligas-
+                     <lb n="78" break="no"/>sero a <rs type="pedagogy" ref="#es_lettura">codesto esercizio</rs>, ho una gran paura che non sareb-
+                     <lb n="79" break="no"/>bero molti quelli capaci di <seg type="idiom" xml:id="cavarne_piedi">cavarne i piedi</seg>. Il che prove-
+                     <lb n="80" break="no"/>rebbe, nella massima parte dei casi, che non si sa leggere; e 
+                     <lb n="81"/>veramente... No. non è punto un’ingiuria; non è nemmeno 
+                     <lb n="82"/>un’accusa; è la semplice osservazione di un fatto che va 
+                     <lb n="83"/>attribuito, sul serio e non per seguire la moda, principal-
+                     <lb n="84" break="no"/>mente al tempo. Il burrascoso ingrossare della produttività 
+                     <lb n="85"/>della stampa ha il suo lato triste; la densità dei concetti, 
+                     <lb n="86"/>il vigore del pensiero si consumano da due lati ad un tempo. 
+                     <lb n="87"/>Dal canto degli <rs type="role">scrittori</rs>, ai parti <choice><orig>intieri</orig><reg>interi</reg></choice>, pieni, sodi e rossi, 
+                     <lb n="88"/>maturati in lunghe fatiche, si vanno sostituendo i fruttu-
+                     <lb n="89" break="no"/>coli abortivi, ora <distinct type="metaphorical" subtype="medical" xml:id="idropici">idropici</distinct>, ora flosci, tinti d’un roseo che vuol 
+                     <lb n="90"/>essere stropicciato per diventar rosso, tirati giù ogni tanto, 
+                     <lb n="91"/>così da occupare con uno l’attenzione appena quanto basti 
+                     <lb n="92"/>per arrivargli dietro con un altro; perchè il termine entro 
+                     <lb n="93"/>il quale <distinct type="literary"><choice><orig>cangiano</orig><reg>cambiano</reg></choice></distinct> e le materie di discorsi e i soggetti di 
+                     <lb n="94"/>riflessione si è andato accorciando, accorciando, accorciando. 
+                     <lb n="95"/>Dall’altro lato i leggenti sono incalzati continuamente dalla 
+                     <lb n="96"/>roba che arriva e passa, e non han tempo a fermare il pen-
+                     <lb n="97" break="no"/>siero sopra un lavoro che già <num type="cardinal" value="2">due</num>, <num type="cardinal" value="4">quattro</num>, <num type="cardinal" value="10">dieci</num> altri sullo 
+                     <lb n="98"/>stesso argomento spuntano di qua e di là. E come se ciò 
+                     <lb n="99"/>non bastasse, <num type="cardinal" value="1000">mille</num> ostacoli, <num type="cardinal" value="1000">mille</num> distrazioni congiurano 
+                     <lb n="100"/>contro qualunque miglior volontà del mondo. <q type="rhetorical_question">Chi ha mai 
+                     <lb n="101"/>calcolato quanto il moltiplicarsi dei <rs type="org" subtype="social_club">circoli</rs>, dei <rs type="place" subtype="entertainment">teatri</rs>, delle 
+                     <lb n="102"/><rs type="place" subtype="commercial">botteghe</rs> da caffè, da liquori, da pasticcerie, di tutte quelle 
+                     <lb n="103"/>insomma che contengono (brutto segno) tavolini e seggiole, 
+                     <lb n="104"/>abbiano rubato al venerato focolare domestico e al fecondo 
+                     <lb n="105"/>e confidente scrittoio; pur <choice><orig>diffalcando</orig><reg>defalcando</reg></choice>, come è giusto, quello 
+                     <lb n="106"/>che spetta al diffondersi di certi piccoli agi della vita?</q> Gli 
+                     <lb n="107"/>uomini si vedono e si <distinct type="metaphorical" xml:id="arrotano">arrotano</distinct> assai più in questo <date from="1800" to="1899">secolo</date> 
+                     <lb n="108"/>che non negli <date notAfter="1799">antecedenti</date>; e questo progresso, che non è 
+                     <lb n="109"/>di quelli a incremento continuo, ma anzi precisamente di 
+                     <lb n="110"/>quegli altri, critici e ristretti a certi periodi, come la cre-
+                     <lb n="111" break="no"/>scita dei ragazzi, questo progresso, dico, è in parte un bene 
+                     <lb n="112"/>ma in parte anche un male. Divulga e perfeziona il con-
+                     <lb n="113" break="no"/>cetto della natura umana, agevolando così l’avviamento 
+                     <lb n="114"/>alla eguaglianza e alla fratellanza; ma accresce le relazioni 
+                     <lb n="115"/>superficiali e scema contemporaneamente le relazioni in-
+                     <lb n="116" break="no"/>tense e profonde. Ebbene, c’è tanta somiglianza fra le re-
+                     <lb n="117" break="no"/>lazioni dell’uomo con i suoi simili e quelle dell’uomo con i 
+                     <lb n="118"/>libri!
+                  </p>
+                  <p facs="#art1_p9_beg #art1_p9_end">
+                     <lb n="119"/>Vi figurate <date notAfter="1799">quei tempi</date> quando s’usciva di casa con la 
+                     <lb n="120"/>spada al fianco, e di sera si portava il lanternino; e dopo 
+                     <lb n="121"/><measure quantity="2" unit="h">due ore</measure> di notte o <measure quantity="3" unit="h">tre</measure> al più, tutti i pacifici cittadini erano 
+                     <lb n="122"/>chiusi nelle loro case, chè altrimenti c’era da incappare nel 
+                     <lb n="123"/><rs type="person" role="magistrate" xml:id="bargello">bargello</rs> e magari nella <term type="juridical" subtype="torture" xml:id="corda">corda</term>? L’uomo di <date notAfter="1799">quei tempi</date> com-
+                     <lb n="124" break="no"/>perava forse un libro l’anno, e se lo leggeva tutto, e per 
+                     <lb n="125"/>un pezzetto non parlava d’altro con quei quattro amici 
+                     <lb n="126"/>che vedeva in due o tre case, la sua e le loro, ma sempre 
+                     <lb n="127"/>in case, cioè in famiglia, con la compagnia di donne che ci 
+                     <lb n="128"/>si trovavano bene; preziosissimo <choice><orig>benefizio</orig><reg>beneficio</reg></choice>, men frequente, 
+                     <lb n="129"/>men vivo, men integro <date when="1881">oggi</date> che abbiamo portato i tre 
+                     <lb n="130"/>quarti della nostra vita giù per le strade. Quell’uomo leg-
+                     <lb n="131" break="no"/>geva davvero. Noi non leggiamo più: noi <distinct type="metaphorical">divoriamo</distinct> tanta 
+                     <lb n="132"/>e tanta roba, che non possiamo distribuirla nè ordinarla: 
+                     <lb n="133"/>nella nostra mente non c’è, passatemi l’<choice><orig>imagine</orig><reg>immagine</reg></choice>, un <seg type="rhetorical_figure" subtype="metaphor">cantuc-
+                     <lb n="134" break="no"/>cio di retrobottega</seg> dove si traffichi l’andarivieni a <distinct type="literary" xml:id="rifascio">rifascio</distinct> 
+                     <lb n="135"/>della roba inutile; e qualche volta la lasciamo proprio nel 
+                     <lb n="136"/>bel mezzo del negozio, magari in vetrina. La roba, di qua-
+                     <lb n="137" break="no"/>lunque qualità, ci si appiccica oggi, vola via domani, noi 
+                     <lb n="138"/>non ce n’accorgiamo nemmeno. La <seg type="rhetorical_figure" subtype="metaphor">banca della mente</seg> non 
+
+                     <pb n="253" facs="#surface_art_1_3"/>
+                     <cb n="1"/>
+
+                     <lb n="139"/>distingue fra partite di giro, portafogli e capitale <hi rend="italic"><foreign xml:lang="fr">Honny 
+                     <lb n="140"/>soit qui mal y pense</foreign></hi>, le nostre teste sono ordinate su per 
+                     <lb n="141"/>giù come le <rs type="org">biblioteche</rs> del <placeName type="state" ref="#Italia_1">regno d’Italia</placeName>.
+                  </p>
+                  <p facs="#art1_p10">
+                     <lb n="142"/>L’uomo di <date notAfter="1799">quegli altri tempi</date> aveva, è vero, delle prefe-
+                     <lb n="143" break="no"/>renze talvolta arbitrarie per alcuni libri: in quante bio-
+                     <lb n="144" break="no"/>grafie non troviamo detto: <q>« ogni giorno leggeva qualche 
+                     <lb n="145"/>pagina del tale autore, <num type="cardinal" value="100">cento</num> versi del tale poeta...»</q> oppure 
+                     <lb n="146"/><q>« il tale scrittore fu la sua lettura quotidiana! »</q> Noi a quelle 
+                     <lb n="147"/>letture esclusive, assidue, appassionate, abbiamo sostituito 
+                     <lb n="148"/>la lettura quasi indifferente di qualunque roba stampata. 
+                     <lb n="149"/>Allo stesso modo nelle relazioni umane la benevolenza uni-
+                     <lb n="150" break="no"/>versale va sostituendosi alle amicizie, e non cresce senza 
+                     <lb n="151"/>danno di esse. La benevolenza universale è una bella pa-
+                     <lb n="152" break="no"/>rola; diciamo pure, con maggior rispetto, è un ideale di-
+                     <lb n="153" break="no"/>vino; ma, calata nella natura umana, <choice><orig>risica</orig><reg>rischia</reg></choice> d’ammalare di 
+                     <lb n="154"/><distinct type="metaphorical" subtype="medical" xml:id="scrofola_bianca">scrofola bianca</distinct> e di parere <seg type="rhetorical_figure" subtype="personification">sorella germana</seg> dell’egoismo : 
+                     <lb n="155"/>anche nella <seg type="rhetorical_figure" subtype="metaphor">battaglia della vita</seg> ci vogliono un pochino al-
+                     <lb n="156" break="no"/>leati e avversari. <date when="1881">Oggi</date> le maggiori difficoltà della vita sono, 
+                     <lb n="157"/>almeno per chi le affronta, più intime, toccano più <distinct type="literary" xml:id="addentro">addentro</distinct> 
+                     <lb n="158"/>l’animo di ciascuno nei cui <distinct type="literary" xml:id="penetrali">penetrali</distinct> meno agevolmente un al-
+                     <lb n="159" break="no"/>tro, anche amico, può scendere; nei <date notAfter="1799">tempi andati</date> le difficoltà 
+                     <lb n="160"/>della vita piuttosto estrinseche e materiali, la vita interiore più 
+                     <lb n="161"/>quieta, favorivano salde, ferree amicizie e amori benedetta-
+                     <lb n="162" break="no"/>mente violenti e devozioni infinite; dove si sentiva, e come, il 
+                     <lb n="163"/>calore ed il sangue! Ebbene, tale quale, tra l’uomo e il libro 
+                     <lb n="164"/>si stabiliva un’amicizia, un’alleanza, non solo per vincere la 
+                     <lb n="165"/>monotonia dell’esistenza, ma per far breccia nell’angusta 
+                     <lb n="166"/>cerchia di cose in cui l’uomo si volgeva, per vendicare ge-
+                     <lb n="167" break="no"/>nerosamente, nelle solitudini del pensiero, oppressioni di 
+                     <lb n="168"/>uomini e avversità di fortuna. A quel libro prediletto si 
+                     <lb n="169"/>tornava in diverse età della vita, in diverse condizioni 
+                     <lb n="170"/>d’animo, in diverse vicende della sorte. Quel libro conteneva 
+                     <lb n="171"/>tanto di filosofia da bastare al suo padrone; il quale, ru-
+                     <lb n="172" break="no"/>minandone i pensieri, lo accresceva, quasi senza saperlo, 
+                     <lb n="173"/>del lavoro proprio, che poi gustava, rileggendo, come sco-
+                     <lb n="174" break="no"/>perta nuova: egli in quel libro trovava, o ci metteva, quel 
+                     <lb n="175"/>tanto di poesia che l’anima sua desiderasse, e lo accordava 
+                     <lb n="176"/>con la filosofia come nella vita s’accordano il palpito e il 
+                     <lb n="177"/>pensiero: e il libro si faceva sempre più umano, e l’uomo vi 
+                     <lb n="178"/>trovava sempre meglio la sua compagnia adorata, senza tut-
+                     <lb n="179" break="no"/>tavia aver coscienza delle microscopiche stratificazioni ch’egli 
+                     <lb n="180"/>stesso ci aveva aggiunte e ch’erano parte del suo essere. 
+                     <lb n="181"/>Quel libro passava sotto il suo capezzale mesi ed anni, chia-
+                     <lb n="182" break="no"/>mato a confortare le prime e le ultime ore della giornata: 
+                     <lb n="183"/>e alla giornata estrema rimaneva ancora là accanto al suo 
+                     <lb n="184"/>spento amico, vicino al pio lumicino della morte; poi pas-
+                     <lb n="185" break="no"/>sava, reliquia cara, nelle mani d’un congiunto o d’un amico, 
+                     <lb n="186"/>e talvolta eran lacrime i tributi di riverenza ed affetto dati 
+                     <lb n="187"/>alle logore pagine e alle ingiallite postille.... Ai <date when="1881">nostri giorni</date> 
+                     <lb n="188"/>i libri si pigliano <date type="relative">oggi</date> e si lasciano <date type="relative">domani</date> con serenissima 
+                     <lb n="189"/>indifferenza; come gli amici.
+                  </p>
+                  <p facs="#art1_p11_beg #art1_p11_end">
+                     <lb n="190"/>Fosse arbitrario, fin che si vuole, quell’esclusivismo di re-
+                     <lb n="191" break="no"/>lazione e di affezione, certo ci guadagnava un tanto la vita 
+                     <lb n="192"/>interiore. La quale, se non è tutta la vita, come l’umanità 
+                     <lb n="193"/>ha creduto in tempi febbrili quando l’entusiasmo <distinct type="literary" xml:id="riboccare">riboccò</distinct> in 
+                     <lb n="194"/>fanatismo, è però essenziale alla vita <choice><orig>intiera</orig><reg>intera</reg></choice> <seg type="rhetorical_figure" subtype="simile">come il timone 
+                     <lb n="195"/>alla nave</seg> : e il suo decadimento è un vero e grande guaio 
+                     <lb n="196"/>nell’impetuoso cammino della nostra età; perchè la vita in-
+                     <lb n="197" break="no"/>teriore vuol dire il carattere come la vita esteriore vuol 
+                     <lb n="198"/>dire l’elasticità. Soltanto la vita interiore incardina il ca-
+                     <lb n="199" break="no"/>rattere in quella colossale virtù, quasi più che umana, che 
+                     <lb n="200"/>ci fa capaci di riconoscere le nostre debolezze, le nostre cat-
+                     <lb n="201" break="no"/>tiverie, le nostre vigliaccherie; e chi non ha provato, spro-
+                     <lb n="202" break="no"/>fondandosi nel mistero della propria coscienza, le sangui-
+                     <lb n="203" break="no"/>nose battaglie, le candidissime quieti, gli azzurri smarrimenti, 
+                     <lb n="204"/>le vertigini sublimi e le fiere gioie della solitudine, non può 
+                     <lb n="205"/>dire d’esser vissuto interamente: e dico ai giovani a cui la 
+
+                     <cb n="2"/>
+
+                     <lb n="206"/>vita colma bolle nel sangue e scintilla negli occhi! La vita 
+                     <lb n="207"/>interiore non si vive davvero che o soli o con un amico o con 
+                     <lb n="208"/>un libro; ma da soli meglio che con un amico, e con il libro 
+                     <lb n="209"/>più facilmente che soli. Chi ha il coraggio di specchiarsi 
+                     <lb n="210"/>interamente nella propria anima? Prima che agli altri, ab-
+                     <lb n="211" break="no"/>biamo bisogno di nascondere a noi i nostri difetti. Vi vo-
+                     <lb n="212" break="no"/>lete specchiare nella sincerità d’un amico? Rischiate o di 
+                     <lb n="213"/>appannarla o di guastarvi per sempre con lui. Ci s’ha da 
+                     <lb n="214"/>specchiare nella <choice><orig>riputazione</orig><reg>reputazione</reg></choice> e nel giudizio degli uomini? 
+                     <lb n="215"/>L’umanità civile ha fatto l’ipotesi e n’ebbe una tale con-
+                     <lb n="216" break="no"/>vulsione di paura che nei <rs type="work" subtype="legal_code">codici penali</rs> va scrivendo pene 
+                     <lb n="217"/>perfino contro chi dia del ladro a uno che ha rubato. Ma 
+                     <lb n="218"/>il libro, il libro è uno specchio più galantuomo di tutti gli 
+                     <lb n="219"/>altri; egli è (non vi paia un paradosso) il compagno della 
+                     <lb n="220"/>solitudine, e questo fa onore alla sua <distinct type="literary" xml:id="verecondia">verecondia</distinct>; egli vi 
+                     <lb n="221"/>promette che non ripeterà a nessuno d’aver messo il dito 
+                     <lb n="222"/>sulle vostre piaghe, d’avervi insegnato i vostri difetti, e man-
+                     <lb n="223" break="no"/>tiene il segreto; egli parla per voi, ma ha l’aria di parlare 
+                     <lb n="224"/>ad altri; non basta: il libro, potete esser certi, se <choice><orig>glie ne</orig><reg>gliene</reg></choice> 
+                     <lb n="225"/>capiti l’occasione, rimprovera gli stessi difetti a chiunque 
+                     <lb n="226"/>altro li abbia; e questo, siamo uomini, fa un gran piacere. 
+                  </p>
+                  <p facs="#art1_p12">
+                     <lb n="227"/>Ma <seg type="rhetorical_figure" subtype="personification">il libro è morto</seg>. 
+                  </p>
+                  <p facs="#art1_p13">
+                     <lb n="228"/>Un bel giorno si disse che <seg type="rhetorical_figure" subtype="personification"><rs type="object" xml:id="giornale">il giornale</rs> l’aveva ucciso</seg>. 
+                     <lb n="229"/>E nelle nostre affettuose relazioni gli si sostituì troppo ge-
+                     <lb n="230" break="no"/>nerosamente <rs ref="#giornale">l’uccisore</rs>.
+                  </p>
+                  <p facs="#art1_p14_beg #art1_p14_end">
+                     <lb n="231"/>L’onda dei giornali, fatte (così fosser molte!) le debite 
+                     <lb n="232"/>eccezioni, ci fluttua innanzi fitta di menzogne, dalla politica 
+                     <lb n="233"/>fino alla quarta pagina. Un briciolo, quando va bene, d’idea, 
+                     <lb n="234"/>divisa in cinque o sei particelle, ciascuna sciolta in periodi 
+                     <lb n="235"/>e <distinct type="literary" xml:id="impillotata">impillotata</distinct> in un <term type="typography" xml:id="alinea">alinea</term>: ecco l’<term type="journalism">articolo di fondo</term>: se ne 
+                     <lb n="236"/>leggono le prime parole d’ogni capoverso, e basta. La <term type="journalism">cro-
+                     <lb n="237" break="no"/>naca</term>, chi la legge? L’<term type="journalism">appendice</term>, si sa che roba c’è il caso di 
+                     <lb n="238"/>trovarci! Le <term type="journalism">corrispondenze</term> sono <q>« <seg type="idiom" xml:id="pie_fermo">a piè fermo</seg>. »</q> E i <term type="journalism">di-
+                     <lb n="239" break="no"/>spacci</term> passano bianchi e neri e neri e bianchi <seg type="rhetorical_figure" subtype="simile">come i sol-
+                     <lb n="240" break="no"/>dati degli eserciti <hi rend="italic">continui</hi> dei <rs type="place" subtype="entertainment">palchi scenici</rs></seg>. E insieme con 
+                     <lb n="241"/>ciò il secondo fine che vizia gl’intendimenti, il partito preso 
+                     <lb n="242"/>che falsa i punti di vista, il pettegolezzo che avvilisce i criteri, 
+                     <lb n="243"/>l’emozionismo che deturpa l’arte, la declamazione che gua-
+                     <lb n="244" break="no"/>sta lo stile, la fretta che sciupa la sintassi e la lingua; la bot-
+                     <lb n="245" break="no"/>tega che ammorba tutto: ecco, troppe volte, il giornale, l’on-
+                     <lb n="246" break="no"/>nipotente dei <date type="relative" when="1881">nostri tempi</date>. Sarà capitato anche a voi di sentire 
+                     <lb n="247"/>qualcuno che, volendo troncare qualche battibecco, getta 
+                     <lb n="248"/>là un <q>«lo dice <hi rend="italic">il</hi> giornale»</q> come si direbbe <hi rend="italic">la</hi> <rs type="work" subtype="sacred">Bibbia</rs> 
+                     <lb n="249"/>o <hi rend="italic">il</hi> <rs type="work" subtype="sacred">Vangelo</rs>. Perchè veramente c’è un considerevole numero 
+                     <lb n="250"/>di persone che legge esclusivamente un certo giornale, 
+                     <lb n="251"/>spesso dei peggiori, e ci giura sopra, anzi non suppone 
+                     <lb n="252"/>mai che esista un’altra fonte di notizie e di giudizi, su qua-
+                     <lb n="253" break="no"/>lunque argomento, da mettersi a confronto. Ma il giornale 
+                     <lb n="254"/>non influisce soltanto su quella gente lì: influisce anche 
+                     <lb n="255"/>sull’altra che ne leggiucchia parecchi e non crede a nessuno : 
+                     <lb n="256"/>la ripetizione, la consuetudine, l’ambiente delle impressioni 
+                     <lb n="257"/>di certi modi di sentire, di pensare, di scrivere tutti cat-
+                     <lb n="258" break="no"/>tivi finiscono per modificare gli spiriti loro malgrado. E 
+                     <lb n="259"/>fossimo ancora in <date notAfter="1799">altri tempi</date> quando era di moda il forte 
+                     <lb n="260"/>carattere ; c’era da sperare in una reazione ; ma <date type="relative" when="1881">oggi</date> ! 
+                     <lb n="261"/><date type="relative" when="1881">Oggi</date> è di moda la fragilità ! È curioso osservare quale in-
+                     <lb n="262" break="no"/>fluenza subisca l’animo umano nel <date when="1881">nostro tempo</date> di transi-
+                     <lb n="263" break="no"/>zione tra un ideale filosofico e un altro. Quanto non fu in 
+                     <lb n="264"/>voga, in <date notAfter="1799">altri tempi</date>, il preziosissimo dono dell’uomo di 
+                     <lb n="265"/>potere, con uno sforzo su sè stesso, modificarsi a sua po-
+                     <lb n="266" break="no"/>sta: quanto assegnamento non si fece su quella leva bene-
+                     <lb n="267" break="no"/>detta che parte dall’anima umana e agisce su di lei, nè si 
+                     <lb n="268"/>vede dove poggi! Gli uomini si nutrivano fortemente di un 
+                     <lb n="269"/>pensiero filosofico per il quale si vide nella persona umana 
+                     <lb n="270"/>un corpo principio d’ogni male che l’anima poteva però 
+                     <lb n="271"/>soggiogare a sua posta; ma a poco a poco l’uomo finì col 
+                     <lb n="272"/>perdere la fede in qualunque potenza di migliorare sè stes-
+
+                     <pb n="254" facs="#surface_art_1_4"/>
+                     <cb n="1"/>
+
+                     <lb n="273" break="no"/>so, inchiodando la causa di tutto il suo essere nell’anima 
+                     <lb n="274"/>fabbricata tutta d’un pezzo nel mondo di là. <date type="relative" when="1881">Oggi</date> dell’ani-
+                     <lb n="275" break="no"/>ma è impallidito il concetto oppure essa circola più inaffer-
+                     <lb n="276" break="no"/>rabile che mai per entro i nostri esplorati organismi in 
+                     <lb n="277"/>continuo moto; questi, se continuamente si rinnovano, do-
+                     <lb n="278" break="no"/>vrebbero pur potersi modificare con lenti spostamenti; ma 
+                     <lb n="279"/>chi ci pensa? ci si ferma alla conformazione dell’organismo, 
+                     <lb n="280"/>si spiega tutto con essa o si rinunzia a qualunque modifi-
+                     <lb n="281" break="no"/>cabilità. Prima l’uomo co’ suoi vizi e con le sue virtù di-
+                     <lb n="282" break="no"/>ventava un assoluto come <name type="deity" ref="#God">Dio</name>: concetto simpaticissimo a 
+                     <lb n="283"/>quelle età: ora l’uomo ridiventa un assoluto per altra via, 
+                     <lb n="284"/>legato com’è, mani e piedi, alla lenta evoluzione dell’uni-
+                     <lb n="285" break="no"/>verso per la quale il tempo di una vita umana non basta 
+                     <lb n="286"/>a operare nulla di percettibile. Così in queste transizioni, 
+                     <lb n="287"/>dove la dissoluzione precede e nasconde la nuova germina-
+                     <lb n="288" break="no"/>zione, paiono sostare le più belle energie dell’animo, e la 
+                     <lb n="289"/>vita morale dell’uomo è più macchinalmente assoluta che 
+                     <lb n="290"/>mai; egli è quel che si trova essere, pensa quel che gli casca in 
+                     <lb n="291"/>mente, fa quel che gli sfugge di mano, tira via là là giorno 
+                     <lb n="292"/>per giorno, <seg type="idiom">senza <distinct type="archaic" xml:id="guari">guari</distinct> saper che pesci pigliare</seg>, e gli ri-
+                     <lb n="293" break="no"/>man desta l’unica brama di divagarsi, di combattere la 
+                     <lb n="294"/>nausea, d’<seg type="idiom">ingannare il tempo</seg>. Perciò anche i giornali cui 
+                     <lb n="295"/>nessuno crede, che nessuno stima, che nessuno ama, tro-
+                     <lb n="296" break="no"/>vano molta gente che li legge, perchè vi cerca un tonico, 
+                     <lb n="297"/>un eccitante purchessia da scuotere l’ebete stanchezza. Per-
+                     <lb n="298" break="no"/>ciò anche i sentimenti di cui tutti <distinct type="literary" xml:id="adontano">s’adontano</distinct>, che tutti 
+                     <lb n="299"/>riprovano, che tutti detestano, son buoni ganci, e talvolta 
+                     <lb n="300"/>i soli, con cui quei giornali cercano di rimorchiare e tra-
+                     <lb n="301" break="no"/>scinare la nostra torpida inerzia. Come lo <rs type="person" role="scientist">scienziato</rs> pro-
+                     <lb n="302" break="no"/>duce non avendo altro movente che il suo purissimo orgo-
+                     <lb n="303" break="no"/>glio, nè altra mira che di giovare, forse per un avvenire 
+                     <lb n="304"/>lontano di secoli, all’umanità, mentre l’<rs type="person" role="industrialist">industriale</rs> non pro-
+                     <lb n="305" break="no"/>duce se non quello che lì per lì sa di potere scaricare di-
+                     <lb n="306" break="no"/>nanzi ad una <rs type="person_group">folla di consumatori</rs> che aspettano; così 
+                     <lb n="307"/>del pari il libro può dirigersi ad un avvenire a cui la vita del-
+                     <lb n="308" break="no"/>l’autore non giungerà e attendere che i lettori vengano a lui, 
+                     <lb n="309"/>mentre il giornale corre incontro ai lettori e fa presa in 
+                     <lb n="310"/>essi dove può: perciò un paese ha d’ordinario il giorna-
+                     <lb n="311" break="no"/>lismo che merita. La qual verità al <rs type="place" ref="#Italia_1">nostro</rs> e ad altri paesi 
+                     <lb n="312"/>non può dare purtroppo che la consolazione dei dannati.
+                  </p>
+                  <p facs="#art1_p15_beg #art1_p15_end">
+                     <lb n="313"/>Ma teniam viva la fede! Nelle crescite sociali si comin-
+                     <lb n="314" break="no"/>cia spesso dal basso; un grande svolgimento si annunzia 
+                     <lb n="315"/>nei suoi primordii con la violenza dei bisogni men nobili 
+                     <lb n="316"/>della natura umana; così l’istinto sessuale che sbriglia le 
+                     <lb n="317"/>sue acute vampe annunzia la virilità che si costituisce nelle 
+                     <lb n="318"/>forze morali. <hi rend="italic">Fecondo</hi> è semplicemente un derivato di <hi rend="italic">feccia</hi>. 
+                     <lb n="319"/>Da questo ancora torbido <distinct type="literary" xml:id="pullulio">pullulìo</distinct> di vita che chiamiamo 
+                     <lb n="320"/>la stampa periodica sorge una nuova e bella potenza della 
+                     <lb n="321"/>società umana. Il periodico non si potrà esattamente sostituire 
+                     <lb n="322"/>al libro in quell’ affettuosa relazione con l’uomo, perchè il 
+                     <lb n="323"/>libro rimane sempre lo stesso, mentre il periodico si muove 
+                     <lb n="324"/>e si muta; il periodico è il libro in movimento; ma non 
+                     <lb n="325"/>ci è forse, così senza parere, in questa differenza un riflesso 
+                     <lb n="326"/>della differenza fra i due periodi della vita del pensiero 
+                     <lb n="327"/>umano, a cui accennammo poc’anzi? fra l’idea che lo spi-
+                     <lb n="328" break="no"/>rito umano si affanni <seg type="rhetorical_figure" subtype="simile">come uno scoiattolo a far girare una 
+                     <lb n="329"/>gabbia fissa, inflessibile, senza uscita</seg>, e l’idea che la gab-
+                     <lb n="330" break="no"/>bia, sia pure senza uscita, si muove, e si va come allar-
+                     <lb n="331" break="no"/>gando, allargando sempre...? Nella <distinct type="literary" xml:id="diuturna">diuturna</distinct> conversazione 
+                     <lb n="332"/>tra l’uomo e il libro, questo, rimanendo fisso, rispecchiava 
+                     <lb n="333"/>soltanto il movimento psicologico del suo amico lettore, 
+                     <lb n="334"/>la parabola della sua vita interiore; nella conversazione 
+                     <lb n="335"/>tra l’uomo e il periodico, questo ha da riflettere il grande 
+                     <lb n="336"/>movimento del mondo <seg type="rhetorical_figure" subtype="simile">come quello d’un immenso sistema 
+                     <lb n="337"/>insieme col quale l’uomo, astro infinitesimale, sente, anche 
+                     <lb n="338"/>dalla corta orbita sua, di essere vôlto</seg>. Nell’umanità albeggia 
+                     <lb n="339"/>la coscienza del suo unito cammino che stringe in solidarietà 
+
+                     <cb n="2"/>
+
+                     <lb n="340"/>anche i minimi e più lontani suoi membri; propagare, avvi-
+                     <lb n="341" break="no"/>vare quella coscienza, fecondarla e accelerare questo cammino, 
+                     <lb n="342"/>ecco ciò che spetta principalmente a quella immediata riper-
+                     <lb n="343" break="no"/>cussione universale di ogni fatto umano che è il periodico. 
+                     <lb n="344"/>Non la periodicità dunque sarebbe un male, chè anzi pur 
+                     <lb n="345"/>che si elevi e si purifichi, il periodico potrà continuare, nel 
+                     <lb n="346"/>proprio ordine e secondo il grande spirito dei nuovi tempi, 
+                     <lb n="347"/>l’ufficio, esercitato per il passato unicamente dai libri, di for-
+                     <lb n="348" break="no"/>mare la gente colta; per esso un uomo, riandando le memorie 
+                     <lb n="349"/>rimastegli di un'abituale lettura periodica potrà con uno 
+                     <lb n="350"/>sguardo afferrare, fino ad un certo punto, i progressi dell’u-
+                     <lb n="351" break="no"/>manità nella vita materiale come nella morale, in ogni mani-
+                     <lb n="352" break="no"/>festazione del pensiero, del sentimento, dell’attività ogni <measure quantity="10" unit="year">die-
+                     <lb n="353" break="no"/>cina d’anni</measure>. Ma questo suppone il saper leggere; cioè saper 
+                     <lb n="354"/>mettere nel nostro pensiero quel che del pensiero altrui o 
+                     <lb n="355"/>del fatto caduto sotto l'altrui osservazione tocchi in qual-
+                     <lb n="356" break="no"/>che modo la nostra vita materiale, sociale o morale, inten-
+                     <lb n="357" break="no"/>dendo con fortezza, con costanza a migliorarla. E quanti 
+                     <lb n="358"/>sanno leggere a questo modo? Oh! i famosi <num type="cardinal" value="19000000">diciannove 
+                     <lb n="359"/>milioni</num> d’<rs type="person_group" subtype="social_class">analfabeti</rs> che la <choice><orig>rettorica</orig><reg>retorica</reg></choice> del <rs type="place" ref="#Italia_1">nostro paese</rs> ha 
+                     <lb n="360"/>strascicato per tutta la carta stampata buttandoli tra i piedi 
+                     <lb n="361"/>a <rs type="person_group" role="minister">ministri</rs> e a <rs type="org">parlamenti</rs>, e facendone indecorosa esposi-
+                     <lb n="362" break="no"/>zione alle compiacenze maligne e alle beffe degli <rs type="person_group">stranieri</rs>, 
+                     <lb n="363"/>consolino la lunga attesa degli effetti dell’<rs type="law">istruzione obbliga-
+                     <lb n="364" break="no"/>toria</rs> con questo pensiero. Che se ha da venire il dì del 
+                     <lb n="365"/>giudizio, vedremo un po’ quanti sanno leggere degli altri 
+                     <lb n="366"/><num type="cardinal" value="8000000">otto milioni</num> che deplorano impettiti e tronfii l’analfabeti-
+                     <lb n="367" break="no"/>smo; vedremo un po’ se, almeno per gli studii che riguar-
+                     <lb n="368" break="no"/>dano l’<hi rend="italic"><foreign xml:lang="la">homo sapiens</foreign></hi>, si legga sopra certe colonne di carta 
+                     <lb n="369"/>straccia <seg type="rhetorical_figure" subtype="personification">figliate</seg> a migliaia da una <term type="technology">macchina</term>, meraviglia del-
+                     <lb n="370" break="no"/>l’industria umana, meglio che nelle riflessioni solitarie e 
+                     <lb n="371"/>nelle povere vicende tra il focolare e il mercato, la campa-
+                     <lb n="372" break="no"/>gna e il cielo.
+                  </p>
+                  <closer facs="#art1_signature">
+                     <signed><persName ref="#T_author_article_1">T.</persName></signed>
+                  </closer>
+               </div>
+            </body>
+            
+            <back>
+               <!--lista delle persone citate nel testo-->
+               <listPerson>
+                  <person xml:id="T_author_article_1">
+                     <persName>T.</persName>
+                  </person>
+                  <person xml:id="winegrower">
+                     <occupation>vignaiolo</occupation>
+                  </person>
+               </listPerson>
+               
+               <!--lista dei luoghi-->
+               <listPlace>
+                  <place xml:id="Italia_1" type="country">
+                     <placeName type="official">Regno d'Italia</placeName>
+                     <placeName type="common">Italia</placeName>
+
+                     <location>
+                        <country key="IT">Italia</country>
+                        <bloc ref="#Europa">Europa</bloc>
+                     </location>
+                     
+                     <state type="political_status" from="1861" to="1946">
+                        <label>Monarchia Costituzionale</label>
+                        <note>Riferimento al Regno d'Italia post-unitario.</note>
+                     </state>
+                  </place>
+               </listPlace>
+
+               <!--glossario-->
+               <div type="glossary">
+                  <head>Glossario</head>
+                  <list>
+                     <label>pampani</label>
+                     <item>
+                        <gloss target="#pampani">Variante letteraria toscana per "pampini" (foglie della vite).</gloss>
+                     </item>
+
+                     <label>villano</label>
+                     <item>
+                        <gloss target="#villano">Abitante della campagna, contadino.</gloss>
+                     </item>
+
+                     <label>banda</label>
+                     <item>
+                        <gloss target="#banda">Parte. Nelle espressioni come "lasciare da banda" o "mettere da banda" equivale a "lasciare da parte" o "mettere da parte".</gloss>
+                     </item>
+
+                     <label>librettucciaccio</label>
+                     <item>
+                        <gloss target="#librettucciaccio">Alterazione complessa di "libro" (diminutivo-vezzeggiativo-peggiorativo). Indica un libro piccolo e di poco valore.</gloss>
+                     </item>
+
+                     <label>strumentali</label>
+                     <item>
+                        <gloss target="#strumentali">Qui utilizzato per indicare le "consonanti". L'autore crea una metafora musicale: mentre le "vocali" rappresentano la voce (il canto), le "strumentali" sono l'accompagnamento strumentale (l'orchestra).</gloss>
+                     </item>
+
+                     <label>cavarne i piedi</label>
+                     <item>
+                        <gloss target="#cavarne_piedi">Riuscire a uscire da una situazione difficile, risolvere un problema complicato.</gloss>
+                     </item>
+
+                     <label>idropici</label>
+                     <item>
+                        <gloss target="#idropici">Letteralmente "affetti da idropisia" (accumulo patologico di liquidi). Qui usato come metafora per descrivere scritti letterari "gonfi" e ampollosi nella forma, ma privi di sostanza vitale e sostanzialmente malati.</gloss>
+                     </item>
+
+                     <label>arrotano</label>
+                     <item>
+                        <gloss target="#arrotano">Letteralmente "affilano" o "sfregano"; qui usato in senso figurato per indicare l'interazione sociale intensa e talvolta logorante tra gli individui che si "sfregano" l'uno contro l'altro nella vita pubblica.</gloss>
+                     </item>
+
+                     <label>bargello</label>
+                     <item>
+                        <gloss target="#bargello">Magistrato responsabile dell'ordine pubblico (specie nei comuni medievali e rinascimentali).</gloss>
+                     </item>
+
+                     <label>corda</label>
+                     <item>
+                        <gloss target="#corda">Riferimento al "tratto di corda", un metodo di tortura giudiziaria.</gloss>
+                     </item>
+
+                     <label>rifascio</label>
+                     <item>
+                        <gloss target="#rifascio">Solo nella locuzione "a rifascio", in grande quantità e confusamente.</gloss>
+                     </item>
+
+                     <label>scrofola bianca</label>
+                     <item>
+                        <gloss target="#scrofola_bianca">In ambito medico, tubercolosi delle linfoghiandole. Qui usato metaforicamente per indicare una debolezza costituzionale, un pallore malsano o una mancanza di vigore vitale della "benevolenza universale".</gloss>
+                     </item>
+
+                     <label>addentro</label>
+                     <item>
+                        <gloss target="#addentro">Nell’interno, nell’intimo, nel profondo dell’animo.</gloss>
+                     </item>
+
+                     <label>penetrali</label>
+                     <item>
+                        <gloss target="#penetrali">La parte più interna e segreta di un edificio (spesso un tempio) o, come in questo caso in senso figurato, la parte più intima e profonda dell'animo umano.</gloss>
+                     </item>
+
+                     <label>riboccò</label>
+                     <item>
+                        <gloss target="#riboccare">Termine letterario per "traboccare". Qui usato metaforicamente per indicare un sentimento (l'entusiasmo) che, crescendo oltre misura, degenera e si riversa nel fanatismo.</gloss>
+                     </item>
+
+                     <label>verecondia</label>
+                     <item>
+                        <gloss target="#verecondia">Pudore, riserbo, modestia. Qui riferito metaforicamente al libro che mantiene segreti i difetti del lettore.</gloss>
+                     </item>
+
+                     <label>impillotata</label>
+                     <item>
+                        <gloss target="#impillotata">Forma variante di "impillottata". Propriamente "lardellata" (in cucina), qui usato in senso figurato per indicare un testo riempito, farcito artificiosamente all'interno di un breve spazio tipografico.</gloss>
+                     </item>
+
+                     <label>alinea</label>
+                     <item>
+                        <gloss target="#alinea">Capoverso.</gloss>
+                     </item>
+
+                     <label>a piè fermo</label>
+                     <item>
+                        <gloss target="#pie_fermo">Locuzione che significa "senza muoversi". Nel contesto giornalistico, indica sarcasticamente le corrispondenze scritte in redazione senza recarsi sul luogo degli eventi.</gloss>
+                     </item>
+
+                     <label>guari</label>
+                     <item>
+                        <gloss target="#guari">Avverbio arcaico, usato in frasi negative col significato di "molto".</gloss>
+                     </item>
+
+                     <label>s'adontano</label>
+                     <item>
+                        <gloss target="#adontano">Offendersi, risentirsi.</gloss>
+                     </item>
+
+                     <label>pullulìo</label>
+                     <item>
+                        <gloss target="#pullulio">Derivato dal verbo "pullulare". Indica il brulicare confuso e vivace di una moltitudine; qui riferito alla proliferazione disordinata della stampa periodica.</gloss>
+                     </item>
+
+                     <label>diuturna</label>
+                     <item>
+                        <gloss target="#diuturna">Durevole, protratta nel tempo. Per estensione: continua, ininterrotta</gloss>
+                     </item>
+                  </list>
+               </div>
+            </back>
+         </text>
+
+         <!--secondo testo: ARTICOLO 2-->
+         <text>
+            <body>
+               <div type="article" xml:id="articolo_2" source="#articolo_2_bibl">
+
+                  <pb n="341" facs="#surface_art_2"/>
+                  <cb n="2"/>
+
+                  <head type="main" facs="#art2_title">LA LEGGE SUL LAVORO DEI FANCIULLI.</head>
+
+                  <head type="sub" facs="#art2_subtitle">CORRISPONDENZA DAL VENETO.</head>
+
+                  <p facs="#art2_p1">
+                     <lb n="1"/>Mentre <choice><orig>colla</orig><reg>con la</reg></choice> solita indifferenza si discute di <rs type="law">legisla-
+                     <lb n="2" break="no"/>zione sociale</rs>, senza riuscire mai a nessuna conclusio-
+                     <lb n="3" break="no"/>ne, i guai che più volte noi abbiamo <choice><orig>denunziato</orig><reg>denunciato</reg></choice> conti-
+                     <lb n="4" break="no"/>nuano e si esacerbano. Fra i molti fatti nuovi e dolorosi
+                     <lb n="5"/>ne riferiamo <date when="1880-11-28"><distinct type="literary" xml:id="oggidi">oggidì</distinct></date> uno orrendo, del quale possiamo ga-
+                     <lb n="6" break="no"/>rantire l’esattezza. In uno stabilimento industriale del <persName ref="#Wepfer"><roleName type="honorific"><choice><abbr>sig.</abbr><expan>signor</expan></choice></roleName>
+                     <lb n="7"/><surname>Wepper</surname></persName> a <placeName ref="#Pordenone">Pordenone</placeName>, lavorava una <rs type="person" ref="#vittima_pordenone" role="worker">giovinetta</rs> <measure type="age" quantity="11" unit="year">undicenne</measure>;
+                     <lb n="8"/>lavorava <time from="18:00:00" to="05:00:00">dalle sei pomeridiane alle cinque antimeridiane</time> !
+                     <lb n="9"/>Mezzo addormentata per l’età e per la fatica, le cadde una
+                     <lb n="10"/><term type="industry" xml:id="spola">spola</term> e per rialzarla sonnacchiosa e impacciata, abbassò il
+                     <lb n="11"/>capo, e venne presa fra due pezzi di ferro che si uniscono
+                     <lb n="12"/>ad ogni minuto. Rimase morta sul colpo la <rs type="person" ref="#vittima_pordenone">poveretta</rs> per
+                     <lb n="13"/><term type="medical">fratture molteplici del cranio</term> e per <term type="medical">emorragia</term>. È una morta
+                     <lb n="14"/>di più; <q type="rhetorical_question">chi la ricorda e chi se ne occupa?</q> Noi abbiamo
+                     <lb n="15"/>voluto interrogare coloro che la conoscevano e indagare
+                     <lb n="16"/>la faticosa esistenza di questa <rs type="person" ref="#vittima_pordenone">vittima precoce del lavoro</rs>.
+                     <lb n="17"/>Per recarsi alla <rs type="place" subtype="factory">fabbrica</rs> doveva ogni mattina ed ogni sera
+                     <lb n="18"/>fare almeno <measure quantity="1.5" unit="h">un’ora e mezzo</measure> di cammino.
+                  </p>
+                  <p facs="#art2_p2">
+                     <lb n="19"/>Simili fatti luttuosi, che non si possono negare, non sareb-
+                     <lb n="20" break="no"/>bero avvenuti, se esistesse la <rs type="law">legge</rs> che da tanti anni noi
+                     <lb n="21"/>invochiamo e se la si applicasse lealmente e severamente. Le
+                     <lb n="22"/><rs type="person_group" subtype="F">giovanette</rs> e i <rs type="person_group" subtype="M">giovanetti</rs> a <measure type="age" quantity="11" unit="year">undici anni</measure> non devono lavorare
+                     <lb n="23"/>di notte; ecco un semplice aforisma, che nessun <rs type="person" role="doctor">medico</rs> e
+                     <lb n="24"/>nessun <seg type="rhetorical_figure" subtype="metonymy">cuore di madre</seg> potrebbero disdire. Il sonno li sor-
+                     <lb n="25" break="no"/>prende durante il lavoro; e il <term type="machine">telaio meccanico</term> spezza ine-
+                     <lb n="26" break="no"/>sorabilmente il cranio, come è avvenuto a <placeName ref="#Pordenone">Pordenone</placeName>, e le
+                     <lb n="27"/>dita, come è avvenuto qualche anno fa a un <rs type="person" subtype="youth" role="worker">giovanetto ope-
+                     <lb n="28" break="no"/>raio</rs> della <placeName ref="#Follina">Follina</placeName>. Vi è una serie di mali inevitabili nella in-
+                     <lb n="29" break="no"/>dustria , la quale ha i suoi morti e i suoi feriti per neces-
+                     <lb n="30" break="no"/>sità di cose. Ma ogni morte e ogni ferita che si potevano
+                     <lb n="31"/>evitare per provvidenza di <rs type="law">legge</rs> e di istituzione devono
+                     <lb n="32"/>suscitare un rimorso nelle <rs type="group" subtype="social_class">classi dirigenti</rs>, che fanno la
+                     <lb n="33"/><rs type="law">legge</rs> in <placeName ref="#Italia_2">Italia</placeName>. Il rispetto e la tutela della vita umana nel-
+                     <lb n="34" break="no"/>l’età che per la sua tenerezza non può difendersi da sè è
+                     <lb n="35"/>un principio svolto in quasi tutte le <rs type="law">legislazioni</rs> e appli-
+                     <lb n="36" break="no"/>cato da per tutto in <placeName ref="#Europa">Europa</placeName>, tranne nel <placeName ref="#Belgio">Belgio</placeName> e nell’<placeName ref="#Italia_2">Italia</placeName>.
+                     <lb n="37"/>Quando ci decideremo a discorrere meno pietosamente e a
+                     <lb n="38"/>operare più democraticamente? In verità c’è da esserne <distinct type="literary" xml:id="scorati">scorati</distinct>!
+                  </p>
+               </div>
+            </body>
+
+            <back>
+               <!--questa sezione contiene l'elenco dei luoghi citati nel testo-->
+               <listPlace> 
+
+                  <place xml:id="Pordenone" type="city"> <placeName>Pordenone</placeName>
+                     <location>
+                        <settlement type="city">Pordenone</settlement>
+                        <region>Friuli-Venezia Giulia</region>
+                        <country key="IT" ref="#Italia_2">Italia</country>
+                     </location>
+                  </place>
+
+                  <place xml:id="Follina" type="town">
+                     <placeName>Follina</placeName>
+                     <location>
+                        <settlement type="town">Follina</settlement> 
+                        <region>Veneto</region>
+                        <country key="IT" ref="#Italia_2">Italia</country> 
+                     </location>
+                  </place>
+
+                  <place xml:id="Italia_2" type="country">
+                     <placeName>Italia</placeName>
+                     <location>
+                        <country key="IT">Italia</country> 
+                        <bloc ref="#Europa">Europa</bloc> 
+                     </location>
+                  </place>
+
+                  <place xml:id="Belgio" type="country">
+                     <placeName>Belgio</placeName>
+                     <location>
+                        <country key="BE">Belgio</country>
+                        <bloc ref="#Europa">Europa</bloc>
+                     </location>
+                  </place>
+
+                  <place xml:id="Europa" type="continent">
+                     <placeName>Europa</placeName>
+                  </place>
+
+               </listPlace>
+
+               <!--questa sezione contiene l'elenco delle persone citate nel testo-->
+               <listPerson> 
+                  <person xml:id="Wepfer">
+                     <persName>
+                        <forename>Emilio</forename>
+                        <surname>Wepfer</surname>
+                     </persName>
+                     <note>Industriale cotoniero operante a Pordenone. Nel testo citato come "Wepper".</note>
+                     <idno type="URI">https://www.enciclopediabresciana.it/enciclopedia/index.php?title=WEPFER_Emilio</idno>
+                  </person>
+
+                  <person xml:id="vittima_pordenone">
+                     <persName>
+                        <forename>Giuseppina</forename>
+                        <surname>Moro</surname>
+                     </persName>
+                     <age value="11">11 anni</age>
+                     <sex value="F"/>
+                     <occupation>Operaia filatrice</occupation>
+                     <death>
+                        <date when="1880">1880</date>
+                     </death>
+                     <note>
+                        Identificata come la vittima citata nell'articolo grazie a ricerche storiografiche locali: 
+                        <ref target="https://www.storiastoriepn.it/lo-sciopero-delle-bambine-nella-filatura-del-cotonificio-amman-di-pordenone">StoriaStoriePn</ref>.
+                     </note>
+                     <idno type="URI">https://www.storiastoriepn.it/lo-sciopero-delle-bambine-nella-filatura-del-cotonificio-amman-di-pordenone/</idno>
+                  </person>
+               </listPerson>
+
+               <!--glossario-->
+               <div type="glossary">
+                  <head>Glossario</head>
+                     <list>
+                        <label>oggidì</label>
+                        <item>
+                           <gloss target="#oggidi">Oggi, nel tempo attuale, al giorno d’oggi.</gloss>
+                        </item>
+
+                        <label>spola</label>
+                        <item>
+                           <gloss target="#spola">Bobina di filo che s’introduce nella navetta e viene fatta passare avanti e indietro tra i fili dell’ordito durante la tessitura.</gloss>
+                        </item>
+
+                        <label>scorati</label>
+                        <item>
+                           <gloss target="#scorati">Sfiduciati, abbattuti, avviliti.</gloss>
+                        </item>
+                     </list>
+               </div>
+            </back>
+         </text>
+
+         <!--terzo testo: BIBLIOGRAFIA-->
+         <text>
+            <body>
+               <div type="bibliography" xml:id="bibliografia_sec" source="#sezione_bibliografia_bibl">
+                     
+                     <pb n="253" facs="#surface_biblio_1"/> 
+                     <cb n="2"/> 
+                     
+                     <head facs="#biblio_title">BIBLIOGRAFIA.</head>
+                     
+                     <div type="review" xml:id="review_1">
+                        <bibl facs="#biblio_1_bibl">
+                           <lb n="1"/>
+                              <persName type="real" ref="#Enea_Cavalieri">ENEA CAVALIERI</persName>, 
+                              <title level="m"><hi rend="italic">In giro pel mondo</hi></title>, 
+                              <title type="sub">osservazioni ed appunti</title>, 
+                           <lb n="2"/>
+                              <biblScope unit="volume">Volume primo</biblScope>. — 
+                              <placeName type="city" ref="#Bologna">Bologna</placeName>, 
+                              <publisher>Zanichelli</publisher>, 
+                              <date when="1880">1880</date>. 
+                        </bibl>
+                        
+                        <p facs="#biblio_1_p1_beg #biblio_1_p1_end"> 
+                           <lb n="3"/>I libri che narrano dei viaggi, tranne pochissimi, ci
+                           <lb n="4"/>danno la descrizione di quello che il viaggiatore ha ve-
+                           <lb n="5" break="no"/>duto, con maggiore o minore sollecitudine, secondo il ca-
+                           <lb n="6" break="no"/>rattere, l’intelligenza, l’attitudine ad osservare che possiede.
+                           <lb n="7"/>Ma di rado il lettore trova nei libri di viaggi, oltre alla
+                           <lb n="8"/>descrizione più o meno accurata ed artistica, secondo il
+                           
+                           <pb n="254" facs="#surface_biblio_2"/> 
+                           <cb n="1"/> 
+                           
+                           <lb n="9"/>valore dello scrittore e l’importanza dell’argomento, pro-
+                           <lb n="10" break="no"/>fondità di pensieri, avvertenze sagaci, esame spassionato
+                           <lb n="11"/>e sicuro dei costumi dei vari popoli per trarne confronti
+                           <lb n="12"/>opportuni e per utilità del lettore. L’<rs ref="#Enea_Cavalieri"><choice><abbr>A.</abbr><expan>autore</expan></choice></rs> del cui lavoro
+                           <lb n="13"/>abbiamo per ora solo il primo volume, ci ha offerto un
+                           <lb n="14"/>esempio imitabile e degno di lode sincera per il modo
+                           <lb n="15"/>tenuto nel raccontare questo suo viaggio intorno al globo.
+                           <lb n="16"/>Egli non infarcisce il suo libro con descrizioni per lo più
+                           <lb n="17"/>verbosamente <distinct type="literary" xml:id="inani">inani</distinct> di cose già note, ma racconta con chia-
+                           <lb n="18" break="no"/>rezza quello che è veramente nuovo. Parla dei paesi, delle
+                           <lb n="19"/>città, dei villaggi, delle usanze e dei costumi dei popoli da
+                           <lb n="20"/>lui veduti, in <distinct type="literary" xml:id="guisa">guisa</distinct> che il lettore possa dedurne qualche
+                           <lb n="21"/>nuova idea, e spesso con riflessioni e osservazioni <distinct type="literary" xml:id="acconce">acconce</distinct>
+                           <lb n="22"/>fa notare quello che segnatamente gli <placeName type="country" ref="#USA">Stati Uniti</placeName> hanno
+                           <lb n="23"/>fatto in così breve spazio di vita come nazione. Avverte
+                           <lb n="24"/>ed osserva certe somiglianze e certe dissonanze, le quali
+                           <lb n="25"/>necessariamente provocano <choice><orig>de’</orig><reg>dei</reg></choice> paragoni col <rs type="place" ref="#Italia_3">nostro paese</rs>
+                           <lb n="26"/>che <choice><orig>pur troppo</orig><reg>purtroppo</reg></choice> ci fanno pensare, dolendocene, alla oziosa
+                           <lb n="27"/>ricchezza di memorie gloriose, nella quale, poco curanti
+                           <lb n="28"/>del presente, ci culliamo. <foreign xml:lang="lat"><hi rend="italic">Divitias miseras</hi></foreign>. Anzi noi vor-
+                           <lb n="29" break="no"/>remmo che l’<rs ref="#Enea_Cavalieri"><choice><abbr>A.</abbr><expan>autore</expan></choice></rs> facesse notare <choice><orig>anco</orig><reg>anche</reg></choice> più spesso in quante
+                           <lb n="30"/>cose gli altri popoli, e segnatamente l’<rs type="people">anglo-sassone</rs>, hanno
+                           <lb n="31"/>superato il <rs type="place" ref="#Italia_3">nostro paese</rs>. Al quale sarebbe di grande utilità
+                           <lb n="32"/>se coloro che possono, piuttosto che consumare il tempo in
+                           <lb n="33"/>vani lamenti, volessero imitare il nostro viaggiatore. Aspet-
+                           <lb n="34" break="no"/>tiamo con desiderio il seguito del suo lavoro, auguran-
+                           <lb n="35" break="no"/>doci che abbia l’importanza e la piacevolezza di questo e
+                           <lb n="36"/>anche con la speranza che esca meno deturpato da intolle-
+                           <lb n="37" break="no"/>rabili errori di stampa, come <choice><orig>pur troppo</orig><reg>purtroppo</reg></choice> lo è questo primo
+                           <lb n="38"/>volume.
+                        </p>
+                     </div>
+
+                     <div type="review" xml:id="review_2">
+                        <bibl xml:id="S_Marino_work" facs="#biblio_2_bibl">
+                           <lb n="39"/>
+                              <persName type="real" ref="#Salomone_Marino">S. SALOMONE-MARINO</persName>,
+                              <title level="m"><hi rend="italic">Dei famosi uomini d'arme siciliani fio- 
+                           <lb n="40" break="no"/>riti nel secolo XVI</hi></title>. — 
+                              <placeName type="city" ref="#Palermo">Palermo</placeName>, 
+                              <publisher n="Tipografia di Bernardo Virzì"> <!--nome completo della casa editrice, link: https://digitalibrary-saassipa.cultura.gov.it/entities/publication/78147a1b-68ad-4a8a-a6c8-8f4ab466347b -->
+                                 <choice><abbr>tip.</abbr><expan>tipografia</expan></choice> 
+                                 <choice><sic>Virzi</sic><corr resp="#Francesco_Tozzi">Virzì</corr></choice> <!--correzione del nome della casa editrice. Sulla fonte fonte originaria la parola "Virzì" è scritta senza accento sulla "i"-->
+                              </publisher>, 
+                              <date when="1880">1880</date>.
+                        </bibl>
+                        
+                        <p facs="#biblio_2_p1">
+                           <lb n="41"/><quote source="#S_Marino_work"> « <term type="role">Storici</term> e <term type="role" xml:id="cronisti">cronisti</term>, scrive il 
+                           <choice>
+                              <sic>dottorSalomone-Marino</sic>
+                              <corr resp="#Francesco_Tozzi"><roleName type="title">dottor</roleName> <persName ref="#Salomone_Marino">Salomone-Marino</persName></corr> <!--type="title" perché specifico il titolo accademico dell'autore-->
+                           </choice>, no-
+                           <lb n="42" break="no"/>tando le ben condotte imprese, le sanguinose vittorie, i
+                           <lb n="43"/>trionfi, non cingono di <distinct type="literary" xml:id="lauro">lauro</distinct> e di quercia che il vessillo del
+                           <lb n="44"/>capo, trascurando o non curando quello 
+                              <choice resp="#Francesco_Tozzi">
+                                 <sic>de’gregari</sic>
+                                 <corr>
+                                    <choice>
+                                       <orig>de’</orig>
+                                       <reg>dei</reg>
+                                    </choice>
+                                    <space dim="horizontal" quantity="1" unit="chars"/>
+                                    <term type="role" xml:id="gregari">gregari</term>
+                                 </corr>
+                              </choice>; molto
+                           <lb n="45"/>meno poi sprecano la penna d’oro (devota al principe)
+                           <lb n="46"/>per le mirabili prove del <term type="role">cavaliere</term> o del semplice <term type="role">fante</term>, che
+                           <lb n="47"/>pur sono la causa <distinct type="literary" xml:id="potissima">potissima</distinct> d’una gloriosa giornata cam-
+                           <lb n="48" break="no"/>pale. »</quote> E per rimediarvi egli raccolse notizie di <term type="role">uomini d’ar-
+                           <lb n="49" break="no"/>me</term>, i quali meritavano esser rivendicati.
+                        </p>
+                        <p facs="#biblio_2_p2">
+                           <lb n="50"/>Egli ricercò specialmente memorie intorno a <persName type="historical" ref="#Francesco_Salomone">Francesco-
+                           <lb n="51" break="no"/>Salomone</persName> e <persName type="historical" ref="#Guglielmo_Abbamonte">Guglielmo Abbamonte</persName>, che presero parte alla
+                           <lb n="52"/><eventName ref="#Disfida_Barletta">disfida di <placeName type="city" ref="#Barletta">Barletta</placeName></eventName>: del secondo, <rs type="demonym" ref="#Palermo">palermitano</rs>, ebbe poco a
+                           <lb n="53"/>trovare; ma del primo, <rs type="demonym" ref="#Messina">messinese</rs>, l’<rs type="person" ref="#Salomone_Marino">autore</rs>, omonimo, presenta
+                           <lb n="54"/>molti cenni preziosi.
+                        </p>
+                        <p facs="#biblio_2_p3">
+                           <lb n="55"/>Passa in seguito a rassegna vari altri che se non ebbero
+                           <lb n="56"/>l’onore di prendere parte al famoso <distinct type="literary" xml:id="cimento">cimento</distinct>, si trovarono
+                           <lb n="57"/>in altre lotte ben più sanguinose ed importanti.
+                        </p>
+                        <p facs="#biblio_2_p4">
+                           <lb n="58"/>E molti vengono proprio tratti in luce, ma l’amor patrio
+                           <lb n="59"/>dell’<rs ref="#Salomone_Marino"><choice><abbr>A.</abbr><expan>autore</expan></choice></rs> lo fece forse abbondare nella registrazione di sem-
+                           <lb n="60" break="no"/>plici nomi d’<term type="role" xml:id="armigeri">armigeri</term>, trovatisi in qualche combattimento.
+                        </p>
+                        <p facs="#biblio_2_p5">
+                           <lb n="61"/>Vi è in questo lavoro molta erudizione, e maggiormente
+                           <lb n="62"/>lo rendono utile i documenti, che gli stanno annessi.
+                        </p>
+                     </div>
+               </div>
+            </body>
+
+            <back>
+               <!--questa sezione contiene l'elenco delle persone citate nel testo-->
+               <listPerson>
+                  <person xml:id="Enea_Cavalieri">
+                     <persName>
+                        <forename>Enea</forename>
+                        <surname>Cavalieri</surname>
+                     </persName>
+                     <occupation>Funzionario amministrativo</occupation>
+                     <occupation>Politico</occupation>
+                     <occupation>Viaggiatore e geografo</occupation>
+                     <note>
+                        Collaboratore assiduo della <title level="j">Rassegna Settimanale</title> e amico personale di Sidney Sonnino.
+                     </note>
+                     <idno type="URI">https://www.treccani.it/enciclopedia/enea-cavalieri_(Dizionario-Biografico)/</idno>
+                  </person>
+
+                  <person xml:id="Salomone_Marino">
+                     <persName>
+                        <forename>Salvatore</forename>
+                        <surname>Salomone-Marino</surname>
+                     </persName>
+                     <occupation>Medico e chirurgo</occupation>
+                     <occupation>Folklorista e antropologo</occupation>
+                     <note>Celebre studioso delle tradizioni popolari siciliane e della storia della medicina.</note>
+                     <idno type="URI">https://www.treccani.it/enciclopedia/salvatore-salomone-marino_(Dizionario-Biografico)/</idno>
+                  </person>
+
+                  <person xml:id="Francesco_Salomone">
+                     <persName>
+                        <forename>Francesco</forename>
+                        <surname>Salomone</surname>
+                     </persName>
+                     <occupation>Condottiero</occupation>
+                     <note>Nobile e militare italiano attivo nel XVI secolo, noto per la disfida di Barletta.</note>
+                     <idno type="URI">https://www.treccani.it/enciclopedia/francesco-salomone_(Dizionario-Biografico)/</idno>
+                  </person>
+
+                  <person xml:id="Guglielmo_Abbamonte"> <!--nota: nel testo viene citato erroneamente con il cognome "Abbamonte". Cercando tra i nomi dei 13 partecipanti alla Disfida di Barletta ho potuto appurare l'errore.-->
+                     <persName>
+                        <forename>Guglielmo</forename>
+                        <surname>Albimonte</surname>
+                     </persName>
+                     <persName type="variant">
+                        <forename>Guglielmo</forename>
+                        <surname>Abbamonte</surname>
+                     </persName>
+                     <occupation>Condottiero</occupation>
+                     <occupation>Cavaliere</occupation>
+                     <note>
+                        Cavaliere siciliano (Palermo), fu uno dei tredici italiani partecipanti alla celebre Disfida di Barletta (1503).
+                        Nel testo viene citato erroneamente con il cognome "Abbamonte".
+                     </note>
+                     <idno type="URI">https://it.wikipedia.org/wiki/Guglielmo_Albimonte</idno>
+                  </person>
+
+               </listPerson>
+               
+               <!--questa sezione contiene l'elenco dei luoghi citati nel testo-->
+               <listPlace>
+
+                  <place xml:id="Palermo" type="city">
+                     <placeName>Palermo</placeName>
+                     <location>
+                        <settlement type="city">Palermo</settlement>
+                        <region>Sicilia</region>
+                        <country key="IT" ref="#Italia_3">Italia</country>
+                     </location>
+                  </place>
+
+                  <place xml:id="Messina" type="city">
+                     <placeName>Messina</placeName>
+                     <location>
+                        <settlement type="city">Messina</settlement>
+                        <region>Sicilia</region>
+                        <country key="IT" ref="#Italia_3">Italia</country>
+                     </location>
+                  </place>
+
+                  <place xml:id="Barletta" type="city">
+                     <placeName>Barletta</placeName>
+                     <location>
+                        <settlement type="city">Barletta</settlement>
+                        <region>Puglia</region>
+                        <country key="IT" ref="#Italia_3">Italia</country>
+                     </location>
+                  </place>
+
+                  <place xml:id="Bologna" type="city">
+                     <placeName>Bologna</placeName>
+                     <location>
+                        <settlement type="city">Bologna</settlement>
+                        <region>Emilia-Romagna</region>
+                        <country key="IT" ref="#Italia_3">Italia</country>
+                     </location>
+                  </place>
+
+                  <place xml:id="Italia_3" type="country">
+                     <placeName>Italia</placeName>
+                     <location>
+                        <country key="IT">Italia</country>
+                     </location>
+                  </place>
+
+                  <place xml:id="USA" type="country">
+                     <placeName>Stati Uniti</placeName>
+                     <location>
+                        <country key="US">Stati Uniti d'America</country>
+                     </location>
+                  </place>
+
+               </listPlace>
+               
+               <!--questa sezione contiene l'elenco degli eventi storici citati nel testo-->
+               <listEvent>
+                  <event xml:id="Disfida_Barletta" type="historical_event">
+                     <head>Disfida di Barletta</head>
+                     <desc>
+                        Scontro cavalleresco avvenuto il <date when="1503-02-13">13 febbraio 1503</date> nei pressi di <placeName ref="#Barletta">Barletta</placeName>. 
+                        Vide contrapposti 13 cavalieri italiani e altrettanti francesi; si concluse con la vittoria degli italiani.
+                     </desc>
+                     <idno type="URI">https://it.wikipedia.org/wiki/Disfida_di_Barletta</idno>
+                  </event>  
+               </listEvent>
+
+               <!--glossario-->
+               <div type="glossary">
+                  <head>Glossario</head>
+                  <list>
+                        <label>inani</label>
+                        <item>
+                           <gloss target="#inani">Vane, vuote, inutili.</gloss>
+                        </item>
+                        
+                        <label>guisa</label>
+                        <item>
+                           <gloss target="#guisa">Modo.</gloss>
+                        </item>
+
+                        <label>acconce</label>
+                        <item>
+                           <gloss target="#acconce">Appropriate, adatte, opportune.</gloss>
+                        </item>
+
+                        <label>cronisti</label>
+                        <item>
+                           <gloss target="#cronisti">Compilatori di cronache; autori che registrano eventi storici in ordine cronologico senza interpretarli criticamente.</gloss>
+                        </item>
+
+                        <label>lauro</label>
+                        <item>
+                           <gloss target="#lauro">Alloro.</gloss>
+                        </item>
+
+                        <label>gregari</label>
+                        <item>
+                           <gloss target="#gregari">Soldati semplici, di truppa (termine militare storico per indicare chi non ha gradi).</gloss>
+                        </item>
+
+                        <label>potissima</label>
+                        <item>
+                           <gloss target="#potissima">Che è la più importante, che prevale su ogni altra, che rappresenta l’elemento principale.</gloss>
+                        </item>
+
+                        <label>cimento</label>
+                        <item>
+                           <gloss target="#cimento">Combattimento, scontro armato, prova rischiosa.</gloss>
+                        </item>
+
+                        <label>armigeri</label>
+                        <item>
+                           <gloss target="#armigeri">Uomini d’armi, guerrieri, soldati.</gloss>
+                        </item>
+                  </list>
+               </div>
+            </back>
+         </text>
+
+         <!--quarto testo: NOTIZIE-->
+         <text>
+            <body>
+               <div type="section" xml:id="notizie_sec" source="#sezione_notizie_bibl"> 
+                  
+                  <pb n="40" facs="#surface_notizie"/> 
+                  <cb n="2"/>
+                  
+                  <head facs="#notizie_title">NOTIZIE.</head>
+
+                  <div type="news" xml:id="notizia_1" facs="#notizie_div1">
+                     <p>
+                        <lb n="1"/>— È stato annunziato ultimamente dal <rs type="honorific">signor</rs> <persName ref="#Posocco">Posocco</persName> nel <title level="j"><hi rend="italic">Fanfulla
+                        <lb n="2"/>della Domenica</hi></title> che il <roleName type="honorific"><choice><abbr type="suspension">cav.</abbr><expan>cavaliere</expan></choice></roleName> <persName ref="#Prospero_Viani">Prospero Viani</persName> ha trovato la <term type="literature_genre">Cantica</term> ine-
+                        <lb n="3" break="no"/>dita di <persName ref="#Giacomo_Leopardi">Giacomo Leopardi</persName> intitolata: <title level="a"><hi rend="italic">L'appressamento della morte</hi></title>, e 
+                        <lb n="4"/>che questa sarà pubblicata nel <date when="1880-01">mese corrente</date> nella seconda parte del-
+                        <lb n="5" break="no"/>l’<title level="m"><hi rend="italic">Appendice</hi> all’epistolario Leopardiano</title>. Possiamo aggiungere che que-
+                        <lb n="6" break="no"/>st’appendice comprenderà pure un <term type="literature_genre">epigramma</term> inedito del <rs type="epithet" ref="#Giacomo_Leopardi">Recanatese</rs> 
+                        <lb n="7"/>contro il <persName ref="#Niccolo_Tommaseo">Tommasèo</persName>.
+                     </p>
+                  </div>
+
+                  <div type="news" xml:id="notizia_2" facs="#notizie_div2">
+                     <p>
+                        <lb n="8"/>— Il <rs type="honorific">signor</rs> <persName ref="#Robert_Williams_Buchanan">Buchanan</persName> ha scritto un <term type="literature_genre">poema</term> che uscirà nella pros-
+                        <lb n="9" break="no"/>sima <title level="j"><foreign xml:lang="en">Contemporary Review</foreign></title>. È la storia di un fanciullo educato senza 
+                        <lb n="10"/>nessuna idea religiosa di nessun genere. Dal nome del fanciullo, <persName type="fictional">Giu-
+                        <lb n="11" break="no"/>stiniano</persName>, è intitolato il poema.
+                     </p>
+                  </div>
+
+               </div>
+            </body>
+
+            <back>
+               <listPerson>
+                  <person xml:id="Posocco">
+                     <persName>
+                        <forename>Cesare Ugo</forename>
+                        <surname>Posocco</surname>
+                     </persName>
+                     <occupation>Letterato e insegnante</occupation>
+                     <note>Poeta e docente liceale, autore di saggi e versi.</note>
+                     <idno type="URI">https://studigermanici.archiui.com/entita/2320-posocco-cesare-ugo</idno>
+                  </person>
+
+                  <person xml:id="Prospero_Viani">
+                     <persName>
+                        <forename>Prospero</forename>
+                        <surname>Viani</surname>
+                     </persName>
+                     <occupation>Storico e critico letterario</occupation>
+                     <note>Studioso di Giacomo Leopardi e curatore di diverse edizioni delle sue opere.</note>
+                     <idno type="URI">https://it.wikipedia.org/wiki/Prospero_Viani</idno>
+                  </person>
+                  
+                  <person xml:id="Giacomo_Leopardi">
+                     <persName>
+                        <forename>Giacomo</forename>
+                        <surname>Leopardi</surname>
+                     </persName>
+                     <occupation>Poeta</occupation>
+                     <occupation>Saggista</occupation>
+                     <occupation>Filosofo</occupation>
+                     <note>Tra i massimi scrittori della letteratura italiana di tutti i tempi</note>
+                     <idno type="URI">https://www.treccani.it/enciclopedia/giacomo-leopardi/</idno>
+                  </person>
+
+                  <person xml:id="Niccolo_Tommaseo">
+                     <persName>
+                        <forename>Niccolò</forename>
+                        <surname>Tommaseo</surname>
+                     </persName>
+                     <occupation>Scrittore</occupation>
+                     <occupation>Linguista</occupation>
+                     <occupation>Patriota</occupation>
+                     <note>Noto per i suoi contributi alla letteratura e alla linguistica italiana.</note>
+                     <idno type="URI">https://www.treccani.it/enciclopedia/niccolo-tommaseo/</idno>   
+                  </person>
+
+                  <person xml:id="Robert_Williams_Buchanan">
+                     <persName>
+                        <forename>Robert</forename>
+                        <forename>Williams</forename>
+                        <surname>Buchanan</surname>
+                     </persName>
+                     <occupation>Pittore</occupation>
+                     <occupation>Poeta</occupation>
+                     <occupation>Scrittore</occupation>
+                     <note>Figura di spicco del movimento letterario vittoriano, noto per le sue poesie e i suoi romanzi.</note>
+                     <idno type="URI">https://en.wikipedia.org/wiki/Robert_Williams_Buchanan</idno>
+                  </person>
+               </listPerson>
+            </back>
+         </text>
+      </group>
+   </text>
+</TEI>

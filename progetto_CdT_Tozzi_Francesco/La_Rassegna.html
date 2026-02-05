@@ -1,0 +1,679 @@
+<!DOCTYPE HTML>
+<html lang="it">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>La Rassegna Settimanale - edizione digitale (codifica TEI)</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;family=Merriweather:ital,wght@0,300;0,400;1,400&amp;display=swap" rel="stylesheet"><script defer src="style.js"></script></head>
+   <body class="diplomatic-mode">
+      <nav id="main-nav">
+         <div class="nav-brand">La Rassegna Settimanale (ed. digitale)</div>
+         <ul class="nav-links">
+            <li><a href="#articolo_1">SAPER LEGGERE.</a></li>
+            <li><a href="#articolo_2">LA LEGGE SUL LAVORO DEI FANCIULLI.</a></li>
+            <li><a href="#bibliografia_sec">BIBLIOGRAFIA.</a></li>
+            <li><a href="#notizie_sec">NOTIZIE.</a></li>
+         </ul>
+      </nav>
+      <div id="app-container">
+         <aside id="sidebar">
+            <h3>Visualizzazione</h3>
+            <div class="toggle-group"><button class="mode-btn" onclick="setMode('interpretative')">Interpretativa</button><button class="mode-btn active" onclick="setMode('diplomatic')">Diplomatica</button></div>
+            <h3>Filtri Entità</h3>
+            <div class="filter-group"><button class="filter-btn" onclick="toggleFilter(this, 'persName')">Persone</button><button class="filter-btn" onclick="toggleFilter(this, 'placeName')">Luoghi</button><button class="filter-btn" onclick="toggleFilter(this, 'term')">Termini</button><button class="filter-btn" onclick="toggleFilter(this, 'date')">Date</button></div>
+         </aside>
+         <div id="facsimile-panel">
+            <div class="surface-container" id="surface_art_1_1"><img class="facsimile-img" src="img/saper_leggere_1.png" alt="Facsimile pagina 1.1"><svg class="facsimile-overlay" viewBox="0 0 1598.4 2263.4">
+                  <rect id="art1_title" x="817" y="1895" width="681" height="47" class="zone-rect" onclick="handleZoneClick('art1_title')"></rect>
+                  <rect id="art1_p1_beg" x="817" y="1940" width="681" height="106" class="zone-rect" onclick="handleZoneClick('art1_p1_beg')"></rect></svg></div>
+            <div class="surface-container" id="surface_art_1_2"><img class="facsimile-img" src="img/saper_leggere_2.png" alt="Facsimile pagina 1.2"><svg class="facsimile-overlay" viewBox="0 0 1586.4 2263.4">
+                  <rect id="art1_p1_end" x="130" y="131" width="685" height="163" class="zone-rect" onclick="handleZoneClick('art1_p1_end')"></rect>
+                  <rect id="art1_p2" x="130" y="295" width="686" height="56" class="zone-rect" onclick="handleZoneClick('art1_p2')"></rect>
+                  <rect id="art1_p3" x="130" y="352" width="688" height="28" class="zone-rect" onclick="handleZoneClick('art1_p3')"></rect>
+                  <rect id="art1_p4" x="129" y="381" width="688" height="116" class="zone-rect" onclick="handleZoneClick('art1_p4')"></rect>
+                  <rect id="art1_p5" x="129" y="497" width="687" height="62" class="zone-rect" onclick="handleZoneClick('art1_p5')"></rect>
+                  <rect id="art1_p6" x="128" y="553" width="689" height="517" class="zone-rect" onclick="handleZoneClick('art1_p6')"></rect>
+                  <rect id="art1_p7" x="127" y="1071" width="692" height="862" class="zone-rect" onclick="handleZoneClick('art1_p7')"></rect>
+                  <rect id="art1_p8_beg" x="126" y="1927" width="693" height="141" class="zone-rect" onclick="handleZoneClick('art1_p8_beg')"></rect>
+                  <rect id="art1_p8_end" x="816" y="137" width="697" height="1360" class="zone-rect" onclick="handleZoneClick('art1_p8_end')"></rect>
+                  <rect id="art1_p9_beg" x="818" y="1498" width="692" height="572" class="zone-rect" onclick="handleZoneClick('art1_p9_beg')"></rect></svg></div>
+            <div class="surface-container" id="surface_art_1_3"><img class="facsimile-img" src="img/saper_leggere_3.png" alt="Facsimile pagina 1.3"><svg class="facsimile-overlay" viewBox="0 0 1573.4 2257.4">
+                  <rect id="art1_p9_end" x="129" y="132" width="685" height="97" class="zone-rect" onclick="handleZoneClick('art1_p9_end')"></rect>
+                  <rect id="art1_p10" x="129" y="228" width="694" height="1379" class="zone-rect" onclick="handleZoneClick('art1_p10')"></rect>
+                  <rect id="art1_p11_beg" x="128" y="1602" width="695" height="452" class="zone-rect" onclick="handleZoneClick('art1_p11_beg')"></rect>
+                  <rect id="art1_p11_end" x="814" y="132" width="689" height="608" class="zone-rect" onclick="handleZoneClick('art1_p11_end')"></rect>
+                  <rect id="art1_p12" x="823" y="740" width="680" height="31" class="zone-rect" onclick="handleZoneClick('art1_p12')"></rect>
+                  <rect id="art1_p13" x="823" y="772" width="682" height="85" class="zone-rect" onclick="handleZoneClick('art1_p13')"></rect>
+                  <rect id="art1_p14_beg" x="822" y="856" width="695" height="1198" class="zone-rect" onclick="handleZoneClick('art1_p14_beg')"></rect></svg></div>
+            <div class="surface-container" id="surface_art_1_4"><img class="facsimile-img" src="img/saper_leggere_4.png" alt="Facsimile pagina 1.4"><svg class="facsimile-overlay" viewBox="0 0 1586.4 2269.4">
+                  <rect id="art1_p14_end" x="94" y="146" width="681" height="1145" class="zone-rect" onclick="handleZoneClick('art1_p14_end')"></rect>
+                  <rect id="art1_p15_beg" x="95" y="1292" width="677" height="772" class="zone-rect" onclick="handleZoneClick('art1_p15_beg')"></rect>
+                  <rect id="art1_p15_end" x="781" y="154" width="683" height="933" class="zone-rect" onclick="handleZoneClick('art1_p15_end')"></rect>
+                  <rect id="art1_signature" x="1389" y="1068" width="41" height="29" class="zone-rect" onclick="handleZoneClick('art1_signature')"></rect></svg></div>
+            <div class="surface-container" id="surface_art_2"><img class="facsimile-img" src="img/legge_lavoro_fanciulli_1.png" alt="Facsimile pagina 2"><svg class="facsimile-overlay" viewBox="0 0 1516.4 2271.4">
+                  <rect id="art2_title" x="759" y="945" width="684" height="35" class="zone-rect" onclick="handleZoneClick('art2_title')"></rect>
+                  <rect id="art2_subtitle" x="759" y="982" width="685" height="27" class="zone-rect" onclick="handleZoneClick('art2_subtitle')"></rect>
+                  <rect id="art2_p1" x="759" y="1012" width="685" height="513" class="zone-rect" onclick="handleZoneClick('art2_p1')"></rect>
+                  <rect id="art2_p2" x="759" y="1525" width="691" height="570" class="zone-rect" onclick="handleZoneClick('art2_p2')"></rect></svg></div>
+            <div class="surface-container" id="surface_biblio_1"><img class="facsimile-img" src="img/bibliografia_1.png" alt="Facsimile pagina 3.1"><svg class="facsimile-overlay" viewBox="0 0 1498.4 2287.4">
+                  <rect id="biblio_title" x="748" y="418" width="693" height="48" class="zone-rect" onclick="handleZoneClick('biblio_title')"></rect>
+                  <rect id="biblio_1_bibl" x="764" y="1804" width="687" height="56" class="zone-rect" onclick="handleZoneClick('biblio_1_bibl')"></rect>
+                  <rect id="biblio_1_p1_beg" x="765" y="1869" width="689" height="171" class="zone-rect" onclick="handleZoneClick('biblio_1_p1_beg')"></rect></svg></div>
+            <div class="surface-container" id="surface_biblio_2"><img class="facsimile-img" src="img/bibliografia_2.png" alt="Facsimile pagina 3.2"><svg class="facsimile-overlay" viewBox="0 0 1513.4 2298.4">
+                  <rect id="biblio_1_p1_end" x="76" y="120" width="681" height="863" class="zone-rect" onclick="handleZoneClick('biblio_1_p1_end')"></rect>
+                  <rect id="biblio_2_bibl" x="75" y="1009" width="680" height="71" class="zone-rect" onclick="handleZoneClick('biblio_2_bibl')"></rect>
+                  <rect id="biblio_2_p1" x="75" y="1081" width="676" height="264" class="zone-rect" onclick="handleZoneClick('biblio_2_p1')"></rect>
+                  <rect id="biblio_2_p2" x="71" y="1346" width="679" height="143" class="zone-rect" onclick="handleZoneClick('biblio_2_p2')"></rect>
+                  <rect id="biblio_2_p3" x="70" y="1489" width="678" height="85" class="zone-rect" onclick="handleZoneClick('biblio_2_p3')"></rect>
+                  <rect id="biblio_2_p4" x="70" y="1574" width="677" height="90" class="zone-rect" onclick="handleZoneClick('biblio_2_p4')"></rect>
+                  <rect id="biblio_2_p5" x="71" y="1662" width="676" height="58" class="zone-rect" onclick="handleZoneClick('biblio_2_p5')"></rect></svg></div>
+            <div class="surface-container" id="surface_notizie"><img class="facsimile-img" src="img/notizie_1.png" alt="Facsimile pagina 4"><svg class="facsimile-overlay" viewBox="0 0 1640.4 2266.4">
+                  <rect id="notizie_title" x="852" y="1337" width="690" height="39" class="zone-rect" onclick="handleZoneClick('notizie_title')"></rect>
+                  <rect id="notizie_div1" x="851" y="1378" width="690" height="182" class="zone-rect" onclick="handleZoneClick('notizie_div1')"></rect>
+                  <rect id="notizie_div2" x="852" y="1561" width="691" height="96" class="zone-rect" onclick="handleZoneClick('notizie_div2')"></rect></svg></div>
+         </div>
+         <div id="text-panel">
+            <article class="text-article" id="articolo_1">
+               <div class="page-break">Pagina 251</div><span class="column-marker" title="Inizio Colonna 2">¶</span><div class="head-block text-block" data-facs="art1_title">SAPER LEGGERE.</div>
+               <div class="p-block text-block" data-facs="art1_p1_beg art1_p1_end">
+                  <br>Me ne rammento come se fosse ieri. Il moscato civet-
+                  <br>tava tra i morbidi <span class="gloss-trigger" data-ref="pampani">pampani<span class="tooltip-content">literary</span></span> al sole; io, piluccando un grap-
+                  <br>polo, guardavo il <span class="gloss-trigger" data-ref="">bambino<span class="tooltip-content">person</span></span> del <span class="gloss-trigger" data-ref=""><span class="choice-wrap"><span class="diplomatic form-orig">vignaiuolo</span><span class="interpretative form-reg">vignaiolo</span></span><span class="tooltip-content">person</span></span>, che, venuto
+                  <br>dietro al <span class="gloss-trigger" data-ref="">babbo<span class="tooltip-content">person</span></span> tenendoglisi aggrappato ai calzoni, non mi
+                  
+                  
+                  <div class="page-break">Pagina 252</div>
+                  <span class="column-marker" title="Inizio Colonna 1">¶</span>
+                  
+                  <br>levava gli occhi di dosso: aveva, in quel bel faccione color
+                  <br>terra cotta, un’aria tra il curioso e il timido, come se di-
+                  <br>cesse « sono uno sfacciatello e... ve ne chiedo scusa » e 
+                  <br>tra le labbra semiaperte i bianchissimi denti lodavano le
+                  <br>qualità dentifricie della polenta. 
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p2">
+                  <br>— Lo mandate a scuola codesto bambino? chiesi, tra
+                  <br>un chicco e l’altro. 
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p3">
+                  <br>— Oh! sissignore, bisogna che impari a leggere... 
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p4">
+                  <br>— Sicuro, diss’io: e, poiché figuravo di rappresentare le 
+                  <br>vantate <span class="gloss-trigger" data-ref="">classi dirigenti<span class="tooltip-content">group</span></span>, stavo per continuare, anche in quella 
+                  <br>circostanza e in quell’atteggiamento poco maestosi, con una 
+                  <br>tiratina sulla necessità dell'istruzione; ma il <span class="gloss-trigger" data-ref=""><span class="gloss-trigger" data-ref="villano">villano<span class="tooltip-content">literary</span></span><span class="tooltip-content">person</span></span> riprese: 
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p5">
+                  <br>— Imparando a leggere s’impara a conoscere i <span class="gloss-trigger" data-ref="">bi-
+                     <br>glietti<span class="tooltip-content">object</span></span>.
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p6">
+                  <br>Le mie considerazioni mi morirono sul labbro a quella 
+                  <br>curiosa trovata: la quale tuttavia mi fece pensare. In fondo, 
+                  <br><span class="gloss-trigger" data-ref="">quel brav’uomo<span class="tooltip-content">person</span></span> aveva scavato un lucidissimo criterio della 
+                  <br>natura, dello scopo, dell’estensione di quel rispettabile sa-
+                  <br>pere che è il saper leggere. Gente, pensavo, con un qual-
+                  <br>che lontano sospetto che la procreazione della prole non 
+                  <br>finisca quando il bambino è balzato fuori del seno materno, 
+                  <br>ce n’è molta; e si danno il pensiero di mettere i figliuoli 
+                  <br><em>a imparare a leggere e scrivere</em>: ai nostri giorni, si dice, è 
+                  <br>indispensabile; se <span class="entity date" title="Data">cinquant’anni fa</span>, <span class="entity date" title="Data">trent’anni fa</span>, ci fossero 
+                  <br>state <em>le <span class="gloss-trigger" data-ref="">scuole<span class="tooltip-content">org</span></span></em>, come ci sono <span class="entity date" title="Data">ora</span>, i babbi sarebbero certa-
+                  <br>mente <span class="choice-wrap"><span class="diplomatic form-orig">doventati</span><span class="interpretative form-reg">diventati</span></span> ...; chi sa cosa sarebbero <span class="choice-wrap"><span class="diplomatic form-orig">doventati</span><span class="interpretative form-reg">diventati</span></span> ! Dun-
+                  <br>que almeno diventino i figli; e quindi comincino dal saper 
+                  <br>leggere e scrivere. Ma di codesto sapere in che cosa con-
+                  <br>sista, che portata abbia, che cosa se ne vogliano fare, quanti 
+                  <br>sarebbero in grado di dirlo? quanti ne hanno un’idea che 
+                  <br>valga quella meschina ma concreta del <span class="gloss-trigger" data-ref="">mio povero vi-
+                     <br>gnaiuolo<span class="tooltip-content">person</span></span>?
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p7">
+                  <br>Cosa vuol dire saper leggere? Lascio da parte lo scri-
+                  <br>vere; molta gente sarebbe meglio che non sapesse, a quel 
+                  <br>suo modo, scrivere; ne sanno appena tanto da <em>fare il suo 
+                     <br>nome</em> sotto <span class="gloss-trigger" data-ref="">contratti<span class="tooltip-content">object</span></span> o <span class="gloss-trigger" data-ref="">dichiarazioni<span class="tooltip-content">object</span></span> che leggere veramente 
+                  <br>non sanno e tra le cui righe è talvolta appiattato un in-
+                  <br>ganno; mentre, se non sapessero, c’entrerebbero di mezzo 
+                  <br>i quattr’occhi del <span class="gloss-trigger" data-ref="notary">notaio<span class="tooltip-content">person</span></span>, il quale anche essendo un mode-
+                  <br>stissimo <span class="gloss-trigger" data-ref="">gregario<span class="tooltip-content">person</span></span> ignaro di tutta la poesia versata nei con-
+                  <br>sigli della <span class="gloss-trigger" data-ref="">codificazione francese<span class="tooltip-content">law</span></span> sulla nobiltà della sua 
+                  <br>professione, impedirebbe probabilmente che si facessero 
+                  <br>intrighi. Lasciamo dunque da <span class="gloss-trigger" data-ref="banda">banda<span class="tooltip-content">archaic</span></span> lo scrivere, che poi 
+                  <br>psicologicamente e fisiologicamente è poco più che il reci-
+                  <br>proco dell’operazione del leggere. Ma almeno si sapesse leg-
+                  <br>gere! Perbacco; dopo essere stati inchiodati a un banco, con il 
+                  <br>ditino su quel <span class="gloss-trigger" data-ref="librettucciaccio">librettucciaccio<span class="tooltip-content">morphology</span></span> così umile e così importante, 
+                  <br>che si chiama il <span class="gloss-trigger" data-ref="sillabario">sillabario<span class="tooltip-content">work</span></span>, per dare la caccia a cinque so-
+                  <br>relle <span class="entity term" title="Termine">vocali</span> e venti... <span class="gloss-trigger" data-ref="strumentali">strumentali<span class="tooltip-content">metaphorical</span></span> una più buffa dell’altra, 
+                  <br>che prese una per una sono gemiti, guaiti, gracidii, ulu-
+                  <br>lati, ronzii, sibili <span class="choice-wrap"><span class="diplomatic form-abbr">ecc.</span><span class="interpretative form-expan">eccetera</span></span>, e messe insieme si chiamano olim-
+                  <br>picamente l’umano linguaggio; dopo aver soffocato in questa 
+                  <br>oscura abnegazione tanti desiderii di corse o di capriole, 
+                  <br>tante fantasiette birichine, almeno si sapesse chiaramente 
+                  <br>ed esattamente quanto vale il laborioso acquisto, come 
+                  <br>s'impiega, che frutti ci può dare! Per chi legge, in fin 
+                  <br><span class="choice-wrap"><span class="diplomatic form-orig">de’</span><span class="interpretative form-reg">dei</span></span> conti, la carta stampata piglia facilmente un gran posto 
+                  <br>nella sua vita; è quella che lo tira fuori dai quattro muri 
+                  <br>della sua casa, dalla cinta della sua città, che lo scioglie 
+                  <br>dalla data della sua nascita, lo riposa dal pensiero dei de-
+                  <br>biti, e gli allunga il tiro di quel caro cannocchiale che si 
+                  <br>chiama la speranza!
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p8_beg art1_p8_end">
+                  <br>So di un <span class="gloss-trigger" data-ref="">professore di <span class="gloss-trigger" data-ref="">liceo<span class="tooltip-content">org</span></span><span class="tooltip-content">person</span></span>, il quale usava, e forse usa 
+                  <br>ancora, obbligare i suoi <span class="gloss-trigger" data-ref="">alunni<span class="tooltip-content">person</span></span> a <span class="gloss-trigger" data-ref="es_lettura">questo esercizio<span class="tooltip-content">pedagogy</span></span>; leggere 
+                  <br>un passo di un autore; poi, chiuso il libro, ripetere il pen-
+                  <br>siero dell’autore con altre parole. Ai miei tempi, che non 
+                  <br>sono lontani, quasi sempre l’<span class="gloss-trigger" data-ref="">alunno<span class="tooltip-content">person</span></span> o ripeteva a memoria 
+                  
+                  <span class="column-marker" title="Inizio Colonna 2">¶</span>
+                  
+                  <br>le parole stesse dell’autore, o rimaneva muto; trovare uno 
+                  <br>che sapesse esporre di suo, sia pure in forma imperfetta, 
+                  <br>il pensiero dell’autore in modo da mostrare che gli era en-
+                  <br>trato in mente, era una faccenda seria. Or se l’<span class="entity placeName" title="Luogo">Italia</span> diven-
+                  <br>tasse tutta un <span class="gloss-trigger" data-ref="">liceo<span class="tooltip-content">org</span></span> e si mettessero nei banchi anche gli 
+                  <br><span class="gloss-trigger" data-ref="">uomini grandi e grossi<span class="tooltip-content">person_group</span></span> con tanto di barba, e si obbligas-
+                  <br>sero a <span class="gloss-trigger" data-ref="">codesto esercizio<span class="tooltip-content">pedagogy</span></span>, ho una gran paura che non sareb-
+                  <br>bero molti quelli capaci di cavarne i piedi. Il che prove-
+                  <br>rebbe, nella massima parte dei casi, che non si sa leggere; e 
+                  <br>veramente... No. non è punto un’ingiuria; non è nemmeno 
+                  <br>un’accusa; è la semplice osservazione di un fatto che va 
+                  <br>attribuito, sul serio e non per seguire la moda, principal-
+                  <br>mente al tempo. Il burrascoso ingrossare della produttività 
+                  <br>della stampa ha il suo lato triste; la densità dei concetti, 
+                  <br>il vigore del pensiero si consumano da due lati ad un tempo. 
+                  <br>Dal canto degli <span class="gloss-trigger" data-ref="">scrittori<span class="tooltip-content">role</span></span>, ai parti <span class="choice-wrap"><span class="diplomatic form-orig">intieri</span><span class="interpretative form-reg">interi</span></span>, pieni, sodi e rossi, 
+                  <br>maturati in lunghe fatiche, si vanno sostituendo i fruttu-
+                  <br>coli abortivi, ora <span class="gloss-trigger" data-ref="idropici">idropici<span class="tooltip-content">metaphorical</span></span>, ora flosci, tinti d’un roseo che vuol 
+                  <br>essere stropicciato per diventar rosso, tirati giù ogni tanto, 
+                  <br>così da occupare con uno l’attenzione appena quanto basti 
+                  <br>per arrivargli dietro con un altro; perchè il termine entro 
+                  <br>il quale <span class="gloss-trigger" data-ref=""><span class="choice-wrap"><span class="diplomatic form-orig">cangiano</span><span class="interpretative form-reg">cambiano</span></span><span class="tooltip-content">literary</span></span> e le materie di discorsi e i soggetti di 
+                  <br>riflessione si è andato accorciando, accorciando, accorciando. 
+                  <br>Dall’altro lato i leggenti sono incalzati continuamente dalla 
+                  <br>roba che arriva e passa, e non han tempo a fermare il pen-
+                  <br>siero sopra un lavoro che già due, quattro, dieci altri sullo 
+                  <br>stesso argomento spuntano di qua e di là. E come se ciò 
+                  <br>non bastasse, mille ostacoli, mille distrazioni congiurano 
+                  <br>contro qualunque miglior volontà del mondo. Chi ha mai 
+                  <br>calcolato quanto il moltiplicarsi dei <span class="gloss-trigger" data-ref="">circoli<span class="tooltip-content">org</span></span>, dei <span class="gloss-trigger" data-ref="">teatri<span class="tooltip-content">place</span></span>, delle 
+                  <br><span class="gloss-trigger" data-ref="">botteghe<span class="tooltip-content">place</span></span> da caffè, da liquori, da pasticcerie, di tutte quelle 
+                  <br>insomma che contengono (brutto segno) tavolini e seggiole, 
+                  <br>abbiano rubato al venerato focolare domestico e al fecondo 
+                  <br>e confidente scrittoio; pur <span class="choice-wrap"><span class="diplomatic form-orig">diffalcando</span><span class="interpretative form-reg">defalcando</span></span>, come è giusto, quello 
+                  <br>che spetta al diffondersi di certi piccoli agi della vita? Gli 
+                  <br>uomini si vedono e si <span class="gloss-trigger" data-ref="arrotano">arrotano<span class="tooltip-content">metaphorical</span></span> assai più in questo <span class="entity date" title="Data">secolo</span> 
+                  <br>che non negli <span class="entity date" title="Data">antecedenti</span>; e questo progresso, che non è 
+                  <br>di quelli a incremento continuo, ma anzi precisamente di 
+                  <br>quegli altri, critici e ristretti a certi periodi, come la cre-
+                  <br>scita dei ragazzi, questo progresso, dico, è in parte un bene 
+                  <br>ma in parte anche un male. Divulga e perfeziona il con-
+                  <br>cetto della natura umana, agevolando così l’avviamento 
+                  <br>alla eguaglianza e alla fratellanza; ma accresce le relazioni 
+                  <br>superficiali e scema contemporaneamente le relazioni in-
+                  <br>tense e profonde. Ebbene, c’è tanta somiglianza fra le re-
+                  <br>lazioni dell’uomo con i suoi simili e quelle dell’uomo con i 
+                  <br>libri!
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p9_beg art1_p9_end">
+                  <br>Vi figurate <span class="entity date" title="Data">quei tempi</span> quando s’usciva di casa con la 
+                  <br>spada al fianco, e di sera si portava il lanternino; e dopo 
+                  <br>due ore di notte o tre al più, tutti i pacifici cittadini erano 
+                  <br>chiusi nelle loro case, chè altrimenti c’era da incappare nel 
+                  <br><span class="gloss-trigger" data-ref="bargello">bargello<span class="tooltip-content">person</span></span> e magari nella <span class="entity term" title="Termine">corda</span>? L’uomo di <span class="entity date" title="Data">quei tempi</span> com-
+                  <br>perava forse un libro l’anno, e se lo leggeva tutto, e per 
+                  <br>un pezzetto non parlava d’altro con quei quattro amici 
+                  <br>che vedeva in due o tre case, la sua e le loro, ma sempre 
+                  <br>in case, cioè in famiglia, con la compagnia di donne che ci 
+                  <br>si trovavano bene; preziosissimo <span class="choice-wrap"><span class="diplomatic form-orig">benefizio</span><span class="interpretative form-reg">beneficio</span></span>, men frequente, 
+                  <br>men vivo, men integro <span class="entity date" title="Data">oggi</span> che abbiamo portato i tre 
+                  <br>quarti della nostra vita giù per le strade. Quell’uomo leg-
+                  <br>geva davvero. Noi non leggiamo più: noi <span class="gloss-trigger" data-ref="">divoriamo<span class="tooltip-content">metaphorical</span></span> tanta 
+                  <br>e tanta roba, che non possiamo distribuirla nè ordinarla: 
+                  <br>nella nostra mente non c’è, passatemi l’<span class="choice-wrap"><span class="diplomatic form-orig">imagine</span><span class="interpretative form-reg">immagine</span></span>, un cantuc-
+                  <br>cio di retrobottega dove si traffichi l’andarivieni a <span class="gloss-trigger" data-ref="rifascio">rifascio<span class="tooltip-content">literary</span></span> 
+                  <br>della roba inutile; e qualche volta la lasciamo proprio nel 
+                  <br>bel mezzo del negozio, magari in vetrina. La roba, di qua-
+                  <br>lunque qualità, ci si appiccica oggi, vola via domani, noi 
+                  <br>non ce n’accorgiamo nemmeno. La banca della mente non 
+                  
+                  
+                  <div class="page-break">Pagina 253</div>
+                  <span class="column-marker" title="Inizio Colonna 1">¶</span>
+                  
+                  <br>distingue fra partite di giro, portafogli e capitale <em>Honny 
+                     <br>soit qui mal y pense</em>, le nostre teste sono ordinate su per 
+                  <br>giù come le <span class="gloss-trigger" data-ref="">biblioteche<span class="tooltip-content">org</span></span> del <span class="entity placeName" title="Luogo">regno d’Italia</span>.
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p10">
+                  <br>L’uomo di <span class="entity date" title="Data">quegli altri tempi</span> aveva, è vero, delle prefe-
+                  <br>renze talvolta arbitrarie per alcuni libri: in quante bio-
+                  <br>grafie non troviamo detto: « ogni giorno leggeva qualche 
+                  <br>pagina del tale autore, cento versi del tale poeta...» oppure 
+                  <br>« il tale scrittore fu la sua lettura quotidiana! » Noi a quelle 
+                  <br>letture esclusive, assidue, appassionate, abbiamo sostituito 
+                  <br>la lettura quasi indifferente di qualunque roba stampata. 
+                  <br>Allo stesso modo nelle relazioni umane la benevolenza uni-
+                  <br>versale va sostituendosi alle amicizie, e non cresce senza 
+                  <br>danno di esse. La benevolenza universale è una bella pa-
+                  <br>rola; diciamo pure, con maggior rispetto, è un ideale di-
+                  <br>vino; ma, calata nella natura umana, <span class="choice-wrap"><span class="diplomatic form-orig">risica</span><span class="interpretative form-reg">rischia</span></span> d’ammalare di 
+                  <br><span class="gloss-trigger" data-ref="scrofola_bianca">scrofola bianca<span class="tooltip-content">metaphorical</span></span> e di parere sorella germana dell’egoismo : 
+                  <br>anche nella battaglia della vita ci vogliono un pochino al-
+                  <br>leati e avversari. <span class="entity date" title="Data">Oggi</span> le maggiori difficoltà della vita sono, 
+                  <br>almeno per chi le affronta, più intime, toccano più <span class="gloss-trigger" data-ref="addentro">addentro<span class="tooltip-content">literary</span></span> 
+                  <br>l’animo di ciascuno nei cui <span class="gloss-trigger" data-ref="penetrali">penetrali<span class="tooltip-content">literary</span></span> meno agevolmente un al-
+                  <br>tro, anche amico, può scendere; nei <span class="entity date" title="Data">tempi andati</span> le difficoltà 
+                  <br>della vita piuttosto estrinseche e materiali, la vita interiore più 
+                  <br>quieta, favorivano salde, ferree amicizie e amori benedetta-
+                  <br>mente violenti e devozioni infinite; dove si sentiva, e come, il 
+                  <br>calore ed il sangue! Ebbene, tale quale, tra l’uomo e il libro 
+                  <br>si stabiliva un’amicizia, un’alleanza, non solo per vincere la 
+                  <br>monotonia dell’esistenza, ma per far breccia nell’angusta 
+                  <br>cerchia di cose in cui l’uomo si volgeva, per vendicare ge-
+                  <br>nerosamente, nelle solitudini del pensiero, oppressioni di 
+                  <br>uomini e avversità di fortuna. A quel libro prediletto si 
+                  <br>tornava in diverse età della vita, in diverse condizioni 
+                  <br>d’animo, in diverse vicende della sorte. Quel libro conteneva 
+                  <br>tanto di filosofia da bastare al suo padrone; il quale, ru-
+                  <br>minandone i pensieri, lo accresceva, quasi senza saperlo, 
+                  <br>del lavoro proprio, che poi gustava, rileggendo, come sco-
+                  <br>perta nuova: egli in quel libro trovava, o ci metteva, quel 
+                  <br>tanto di poesia che l’anima sua desiderasse, e lo accordava 
+                  <br>con la filosofia come nella vita s’accordano il palpito e il 
+                  <br>pensiero: e il libro si faceva sempre più umano, e l’uomo vi 
+                  <br>trovava sempre meglio la sua compagnia adorata, senza tut-
+                  <br>tavia aver coscienza delle microscopiche stratificazioni ch’egli 
+                  <br>stesso ci aveva aggiunte e ch’erano parte del suo essere. 
+                  <br>Quel libro passava sotto il suo capezzale mesi ed anni, chia-
+                  <br>mato a confortare le prime e le ultime ore della giornata: 
+                  <br>e alla giornata estrema rimaneva ancora là accanto al suo 
+                  <br>spento amico, vicino al pio lumicino della morte; poi pas-
+                  <br>sava, reliquia cara, nelle mani d’un congiunto o d’un amico, 
+                  <br>e talvolta eran lacrime i tributi di riverenza ed affetto dati 
+                  <br>alle logore pagine e alle ingiallite postille.... Ai <span class="entity date" title="Data">nostri giorni</span> 
+                  <br>i libri si pigliano <span class="entity date" title="Data">oggi</span> e si lasciano <span class="entity date" title="Data">domani</span> con serenissima 
+                  <br>indifferenza; come gli amici.
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p11_beg art1_p11_end">
+                  <br>Fosse arbitrario, fin che si vuole, quell’esclusivismo di re-
+                  <br>lazione e di affezione, certo ci guadagnava un tanto la vita 
+                  <br>interiore. La quale, se non è tutta la vita, come l’umanità 
+                  <br>ha creduto in tempi febbrili quando l’entusiasmo <span class="gloss-trigger" data-ref="riboccare">riboccò<span class="tooltip-content">literary</span></span> in 
+                  <br>fanatismo, è però essenziale alla vita <span class="choice-wrap"><span class="diplomatic form-orig">intiera</span><span class="interpretative form-reg">intera</span></span> come il timone 
+                  <br>alla nave : e il suo decadimento è un vero e grande guaio 
+                  <br>nell’impetuoso cammino della nostra età; perchè la vita in-
+                  <br>teriore vuol dire il carattere come la vita esteriore vuol 
+                  <br>dire l’elasticità. Soltanto la vita interiore incardina il ca-
+                  <br>rattere in quella colossale virtù, quasi più che umana, che 
+                  <br>ci fa capaci di riconoscere le nostre debolezze, le nostre cat-
+                  <br>tiverie, le nostre vigliaccherie; e chi non ha provato, spro-
+                  <br>fondandosi nel mistero della propria coscienza, le sangui-
+                  <br>nose battaglie, le candidissime quieti, gli azzurri smarrimenti, 
+                  <br>le vertigini sublimi e le fiere gioie della solitudine, non può 
+                  <br>dire d’esser vissuto interamente: e dico ai giovani a cui la 
+                  
+                  <span class="column-marker" title="Inizio Colonna 2">¶</span>
+                  
+                  <br>vita colma bolle nel sangue e scintilla negli occhi! La vita 
+                  <br>interiore non si vive davvero che o soli o con un amico o con 
+                  <br>un libro; ma da soli meglio che con un amico, e con il libro 
+                  <br>più facilmente che soli. Chi ha il coraggio di specchiarsi 
+                  <br>interamente nella propria anima? Prima che agli altri, ab-
+                  <br>biamo bisogno di nascondere a noi i nostri difetti. Vi vo-
+                  <br>lete specchiare nella sincerità d’un amico? Rischiate o di 
+                  <br>appannarla o di guastarvi per sempre con lui. Ci s’ha da 
+                  <br>specchiare nella <span class="choice-wrap"><span class="diplomatic form-orig">riputazione</span><span class="interpretative form-reg">reputazione</span></span> e nel giudizio degli uomini? 
+                  <br>L’umanità civile ha fatto l’ipotesi e n’ebbe una tale con-
+                  <br>vulsione di paura che nei <span class="gloss-trigger" data-ref="">codici penali<span class="tooltip-content">work</span></span> va scrivendo pene 
+                  <br>perfino contro chi dia del ladro a uno che ha rubato. Ma 
+                  <br>il libro, il libro è uno specchio più galantuomo di tutti gli 
+                  <br>altri; egli è (non vi paia un paradosso) il compagno della 
+                  <br>solitudine, e questo fa onore alla sua <span class="gloss-trigger" data-ref="verecondia">verecondia<span class="tooltip-content">literary</span></span>; egli vi 
+                  <br>promette che non ripeterà a nessuno d’aver messo il dito 
+                  <br>sulle vostre piaghe, d’avervi insegnato i vostri difetti, e man-
+                  <br>tiene il segreto; egli parla per voi, ma ha l’aria di parlare 
+                  <br>ad altri; non basta: il libro, potete esser certi, se <span class="choice-wrap"><span class="diplomatic form-orig">glie ne</span><span class="interpretative form-reg">gliene</span></span> 
+                  <br>capiti l’occasione, rimprovera gli stessi difetti a chiunque 
+                  <br>altro li abbia; e questo, siamo uomini, fa un gran piacere. 
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p12">
+                  <br>Ma il libro è morto. 
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p13">
+                  <br>Un bel giorno si disse che <span class="gloss-trigger" data-ref="giornale">il giornale<span class="tooltip-content">object</span></span> l’aveva ucciso. 
+                  <br>E nelle nostre affettuose relazioni gli si sostituì troppo ge-
+                  <br>nerosamente <span class="gloss-trigger" data-ref="">l’uccisore<span class="tooltip-content"></span></span>.
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p14_beg art1_p14_end">
+                  <br>L’onda dei giornali, fatte (così fosser molte!) le debite 
+                  <br>eccezioni, ci fluttua innanzi fitta di menzogne, dalla politica 
+                  <br>fino alla quarta pagina. Un briciolo, quando va bene, d’idea, 
+                  <br>divisa in cinque o sei particelle, ciascuna sciolta in periodi 
+                  <br>e <span class="gloss-trigger" data-ref="impillotata">impillotata<span class="tooltip-content">literary</span></span> in un <span class="entity term" title="Termine">alinea</span>: ecco l’<span class="entity term" title="Termine">articolo di fondo</span>: se ne 
+                  <br>leggono le prime parole d’ogni capoverso, e basta. La <span class="entity term" title="Termine">cro-
+                     <br>naca</span>, chi la legge? L’<span class="entity term" title="Termine">appendice</span>, si sa che roba c’è il caso di 
+                  <br>trovarci! Le <span class="entity term" title="Termine">corrispondenze</span> sono « a piè fermo. » E i <span class="entity term" title="Termine">di-
+                     <br>spacci</span> passano bianchi e neri e neri e bianchi come i sol-
+                  <br>dati degli eserciti <em>continui</em> dei <span class="gloss-trigger" data-ref="">palchi scenici<span class="tooltip-content">place</span></span>. E insieme con 
+                  <br>ciò il secondo fine che vizia gl’intendimenti, il partito preso 
+                  <br>che falsa i punti di vista, il pettegolezzo che avvilisce i criteri, 
+                  <br>l’emozionismo che deturpa l’arte, la declamazione che gua-
+                  <br>sta lo stile, la fretta che sciupa la sintassi e la lingua; la bot-
+                  <br>tega che ammorba tutto: ecco, troppe volte, il giornale, l’on-
+                  <br>nipotente dei <span class="entity date" title="Data">nostri tempi</span>. Sarà capitato anche a voi di sentire 
+                  <br>qualcuno che, volendo troncare qualche battibecco, getta 
+                  <br>là un «lo dice <em>il</em> giornale» come si direbbe <em>la</em> <span class="gloss-trigger" data-ref="">Bibbia<span class="tooltip-content">work</span></span> 
+                  <br>o <em>il</em> <span class="gloss-trigger" data-ref="">Vangelo<span class="tooltip-content">work</span></span>. Perchè veramente c’è un considerevole numero 
+                  <br>di persone che legge esclusivamente un certo giornale, 
+                  <br>spesso dei peggiori, e ci giura sopra, anzi non suppone 
+                  <br>mai che esista un’altra fonte di notizie e di giudizi, su qua-
+                  <br>lunque argomento, da mettersi a confronto. Ma il giornale 
+                  <br>non influisce soltanto su quella gente lì: influisce anche 
+                  <br>sull’altra che ne leggiucchia parecchi e non crede a nessuno : 
+                  <br>la ripetizione, la consuetudine, l’ambiente delle impressioni 
+                  <br>di certi modi di sentire, di pensare, di scrivere tutti cat-
+                  <br>tivi finiscono per modificare gli spiriti loro malgrado. E 
+                  <br>fossimo ancora in <span class="entity date" title="Data">altri tempi</span> quando era di moda il forte 
+                  <br>carattere ; c’era da sperare in una reazione ; ma <span class="entity date" title="Data">oggi</span> ! 
+                  <br><span class="entity date" title="Data">Oggi</span> è di moda la fragilità ! È curioso osservare quale in-
+                  <br>fluenza subisca l’animo umano nel <span class="entity date" title="Data">nostro tempo</span> di transi-
+                  <br>zione tra un ideale filosofico e un altro. Quanto non fu in 
+                  <br>voga, in <span class="entity date" title="Data">altri tempi</span>, il preziosissimo dono dell’uomo di 
+                  <br>potere, con uno sforzo su sè stesso, modificarsi a sua po-
+                  <br>sta: quanto assegnamento non si fece su quella leva bene-
+                  <br>detta che parte dall’anima umana e agisce su di lei, nè si 
+                  <br>vede dove poggi! Gli uomini si nutrivano fortemente di un 
+                  <br>pensiero filosofico per il quale si vide nella persona umana 
+                  <br>un corpo principio d’ogni male che l’anima poteva però 
+                  <br>soggiogare a sua posta; ma a poco a poco l’uomo finì col 
+                  <br>perdere la fede in qualunque potenza di migliorare sè stes-
+                  
+                  
+                  <div class="page-break">Pagina 254</div>
+                  <span class="column-marker" title="Inizio Colonna 1">¶</span>
+                  
+                  <br>so, inchiodando la causa di tutto il suo essere nell’anima 
+                  <br>fabbricata tutta d’un pezzo nel mondo di là. <span class="entity date" title="Data">Oggi</span> dell’ani-
+                  <br>ma è impallidito il concetto oppure essa circola più inaffer-
+                  <br>rabile che mai per entro i nostri esplorati organismi in 
+                  <br>continuo moto; questi, se continuamente si rinnovano, do-
+                  <br>vrebbero pur potersi modificare con lenti spostamenti; ma 
+                  <br>chi ci pensa? ci si ferma alla conformazione dell’organismo, 
+                  <br>si spiega tutto con essa o si rinunzia a qualunque modifi-
+                  <br>cabilità. Prima l’uomo co’ suoi vizi e con le sue virtù di-
+                  <br>ventava un assoluto come Dio: concetto simpaticissimo a 
+                  <br>quelle età: ora l’uomo ridiventa un assoluto per altra via, 
+                  <br>legato com’è, mani e piedi, alla lenta evoluzione dell’uni-
+                  <br>verso per la quale il tempo di una vita umana non basta 
+                  <br>a operare nulla di percettibile. Così in queste transizioni, 
+                  <br>dove la dissoluzione precede e nasconde la nuova germina-
+                  <br>zione, paiono sostare le più belle energie dell’animo, e la 
+                  <br>vita morale dell’uomo è più macchinalmente assoluta che 
+                  <br>mai; egli è quel che si trova essere, pensa quel che gli casca in 
+                  <br>mente, fa quel che gli sfugge di mano, tira via là là giorno 
+                  <br>per giorno, senza <span class="gloss-trigger" data-ref="guari">guari<span class="tooltip-content">archaic</span></span> saper che pesci pigliare, e gli ri-
+                  <br>man desta l’unica brama di divagarsi, di combattere la 
+                  <br>nausea, d’ingannare il tempo. Perciò anche i giornali cui 
+                  <br>nessuno crede, che nessuno stima, che nessuno ama, tro-
+                  <br>vano molta gente che li legge, perchè vi cerca un tonico, 
+                  <br>un eccitante purchessia da scuotere l’ebete stanchezza. Per-
+                  <br>ciò anche i sentimenti di cui tutti <span class="gloss-trigger" data-ref="adontano">s’adontano<span class="tooltip-content">literary</span></span>, che tutti 
+                  <br>riprovano, che tutti detestano, son buoni ganci, e talvolta 
+                  <br>i soli, con cui quei giornali cercano di rimorchiare e tra-
+                  <br>scinare la nostra torpida inerzia. Come lo <span class="gloss-trigger" data-ref="">scienziato<span class="tooltip-content">person</span></span> pro-
+                  <br>duce non avendo altro movente che il suo purissimo orgo-
+                  <br>glio, nè altra mira che di giovare, forse per un avvenire 
+                  <br>lontano di secoli, all’umanità, mentre l’<span class="gloss-trigger" data-ref="">industriale<span class="tooltip-content">person</span></span> non pro-
+                  <br>duce se non quello che lì per lì sa di potere scaricare di-
+                  <br>nanzi ad una <span class="gloss-trigger" data-ref="">folla di consumatori<span class="tooltip-content">person_group</span></span> che aspettano; così 
+                  <br>del pari il libro può dirigersi ad un avvenire a cui la vita del-
+                  <br>l’autore non giungerà e attendere che i lettori vengano a lui, 
+                  <br>mentre il giornale corre incontro ai lettori e fa presa in 
+                  <br>essi dove può: perciò un paese ha d’ordinario il giorna-
+                  <br>lismo che merita. La qual verità al <span class="gloss-trigger" data-ref="">nostro<span class="tooltip-content">place</span></span> e ad altri paesi 
+                  <br>non può dare purtroppo che la consolazione dei dannati.
+                  </div>
+               <div class="p-block text-block" data-facs="art1_p15_beg art1_p15_end">
+                  <br>Ma teniam viva la fede! Nelle crescite sociali si comin-
+                  <br>cia spesso dal basso; un grande svolgimento si annunzia 
+                  <br>nei suoi primordii con la violenza dei bisogni men nobili 
+                  <br>della natura umana; così l’istinto sessuale che sbriglia le 
+                  <br>sue acute vampe annunzia la virilità che si costituisce nelle 
+                  <br>forze morali. <em>Fecondo</em> è semplicemente un derivato di <em>feccia</em>. 
+                  <br>Da questo ancora torbido <span class="gloss-trigger" data-ref="pullulio">pullulìo<span class="tooltip-content">literary</span></span> di vita che chiamiamo 
+                  <br>la stampa periodica sorge una nuova e bella potenza della 
+                  <br>società umana. Il periodico non si potrà esattamente sostituire 
+                  <br>al libro in quell’ affettuosa relazione con l’uomo, perchè il 
+                  <br>libro rimane sempre lo stesso, mentre il periodico si muove 
+                  <br>e si muta; il periodico è il libro in movimento; ma non 
+                  <br>ci è forse, così senza parere, in questa differenza un riflesso 
+                  <br>della differenza fra i due periodi della vita del pensiero 
+                  <br>umano, a cui accennammo poc’anzi? fra l’idea che lo spi-
+                  <br>rito umano si affanni come uno scoiattolo a far girare una 
+                  <br>gabbia fissa, inflessibile, senza uscita, e l’idea che la gab-
+                  <br>bia, sia pure senza uscita, si muove, e si va come allar-
+                  <br>gando, allargando sempre...? Nella <span class="gloss-trigger" data-ref="diuturna">diuturna<span class="tooltip-content">literary</span></span> conversazione 
+                  <br>tra l’uomo e il libro, questo, rimanendo fisso, rispecchiava 
+                  <br>soltanto il movimento psicologico del suo amico lettore, 
+                  <br>la parabola della sua vita interiore; nella conversazione 
+                  <br>tra l’uomo e il periodico, questo ha da riflettere il grande 
+                  <br>movimento del mondo come quello d’un immenso sistema 
+                  <br>insieme col quale l’uomo, astro infinitesimale, sente, anche 
+                  <br>dalla corta orbita sua, di essere vôlto. Nell’umanità albeggia 
+                  <br>la coscienza del suo unito cammino che stringe in solidarietà 
+                  
+                  <span class="column-marker" title="Inizio Colonna 2">¶</span>
+                  
+                  <br>anche i minimi e più lontani suoi membri; propagare, avvi-
+                  <br>vare quella coscienza, fecondarla e accelerare questo cammino, 
+                  <br>ecco ciò che spetta principalmente a quella immediata riper-
+                  <br>cussione universale di ogni fatto umano che è il periodico. 
+                  <br>Non la periodicità dunque sarebbe un male, chè anzi pur 
+                  <br>che si elevi e si purifichi, il periodico potrà continuare, nel 
+                  <br>proprio ordine e secondo il grande spirito dei nuovi tempi, 
+                  <br>l’ufficio, esercitato per il passato unicamente dai libri, di for-
+                  <br>mare la gente colta; per esso un uomo, riandando le memorie 
+                  <br>rimastegli di un'abituale lettura periodica potrà con uno 
+                  <br>sguardo afferrare, fino ad un certo punto, i progressi dell’u-
+                  <br>manità nella vita materiale come nella morale, in ogni mani-
+                  <br>festazione del pensiero, del sentimento, dell’attività ogni die-
+                  <br>cina d’anni. Ma questo suppone il saper leggere; cioè saper 
+                  <br>mettere nel nostro pensiero quel che del pensiero altrui o 
+                  <br>del fatto caduto sotto l'altrui osservazione tocchi in qual-
+                  <br>che modo la nostra vita materiale, sociale o morale, inten-
+                  <br>dendo con fortezza, con costanza a migliorarla. E quanti 
+                  <br>sanno leggere a questo modo? Oh! i famosi diciannove 
+                  <br>milioni d’<span class="gloss-trigger" data-ref="">analfabeti<span class="tooltip-content">person_group</span></span> che la <span class="choice-wrap"><span class="diplomatic form-orig">rettorica</span><span class="interpretative form-reg">retorica</span></span> del <span class="gloss-trigger" data-ref="">nostro paese<span class="tooltip-content">place</span></span> ha 
+                  <br>strascicato per tutta la carta stampata buttandoli tra i piedi 
+                  <br>a <span class="gloss-trigger" data-ref="">ministri<span class="tooltip-content">person_group</span></span> e a <span class="gloss-trigger" data-ref="">parlamenti<span class="tooltip-content">org</span></span>, e facendone indecorosa esposi-
+                  <br>zione alle compiacenze maligne e alle beffe degli <span class="gloss-trigger" data-ref="">stranieri<span class="tooltip-content">person_group</span></span>, 
+                  <br>consolino la lunga attesa degli effetti dell’<span class="gloss-trigger" data-ref="">istruzione obbliga-
+                     <br>toria<span class="tooltip-content">law</span></span> con questo pensiero. Che se ha da venire il dì del 
+                  <br>giudizio, vedremo un po’ quanti sanno leggere degli altri 
+                  <br>otto milioni che deplorano impettiti e tronfii l’analfabeti-
+                  <br>smo; vedremo un po’ se, almeno per gli studii che riguar-
+                  <br>dano l’<em>homo sapiens</em>, si legga sopra certe colonne di carta 
+                  <br>straccia figliate a migliaia da una <span class="entity term" title="Termine">macchina</span>, meraviglia del-
+                  <br>l’industria umana, meglio che nelle riflessioni solitarie e 
+                  <br>nelle povere vicende tra il focolare e il mercato, la campa-
+                  <br>gna e il cielo.
+                  </div>
+               <span class="entity persName" title="Persona">T.</span>
+               </article>
+            <article class="text-article" id="articolo_2">
+               <div class="page-break">Pagina 341</div><span class="column-marker" title="Inizio Colonna 2">¶</span><div class="head-block text-block" data-facs="art2_title">LA LEGGE SUL LAVORO DEI FANCIULLI.</div>
+               <div class="head-block text-block" data-facs="art2_subtitle">CORRISPONDENZA DAL VENETO.</div>
+               <div class="p-block text-block" data-facs="art2_p1">
+                  <br>Mentre <span class="choice-wrap"><span class="diplomatic form-orig">colla</span><span class="interpretative form-reg">con la</span></span> solita indifferenza si discute di <span class="gloss-trigger" data-ref="">legisla-
+                     <br>zione sociale<span class="tooltip-content">law</span></span>, senza riuscire mai a nessuna conclusio-
+                  <br>ne, i guai che più volte noi abbiamo <span class="choice-wrap"><span class="diplomatic form-orig">denunziato</span><span class="interpretative form-reg">denunciato</span></span> conti-
+                  <br>nuano e si esacerbano. Fra i molti fatti nuovi e dolorosi
+                  <br>ne riferiamo <span class="entity date" title="Data"><span class="gloss-trigger" data-ref="oggidi">oggidì<span class="tooltip-content">literary</span></span></span> uno orrendo, del quale possiamo ga-
+                  <br>rantire l’esattezza. In uno stabilimento industriale del <span class="entity persName" title="Persona"><span class="choice-wrap"><span class="diplomatic form-abbr">sig.</span><span class="interpretative form-expan">signor</span></span>
+                     <br>Wepper</span> a <span class="entity placeName" title="Luogo">Pordenone</span>, lavorava una <span class="gloss-trigger" data-ref="">giovinetta<span class="tooltip-content">person</span></span> undicenne;
+                  <br>lavorava dalle sei pomeridiane alle cinque antimeridiane !
+                  <br>Mezzo addormentata per l’età e per la fatica, le cadde una
+                  <br><span class="entity term" title="Termine">spola</span> e per rialzarla sonnacchiosa e impacciata, abbassò il
+                  <br>capo, e venne presa fra due pezzi di ferro che si uniscono
+                  <br>ad ogni minuto. Rimase morta sul colpo la <span class="gloss-trigger" data-ref="">poveretta<span class="tooltip-content">person</span></span> per
+                  <br><span class="entity term" title="Termine">fratture molteplici del cranio</span> e per <span class="entity term" title="Termine">emorragia</span>. È una morta
+                  <br>di più; chi la ricorda e chi se ne occupa? Noi abbiamo
+                  <br>voluto interrogare coloro che la conoscevano e indagare
+                  <br>la faticosa esistenza di questa <span class="gloss-trigger" data-ref="">vittima precoce del lavoro<span class="tooltip-content">person</span></span>.
+                  <br>Per recarsi alla <span class="gloss-trigger" data-ref="">fabbrica<span class="tooltip-content">place</span></span> doveva ogni mattina ed ogni sera
+                  <br>fare almeno un’ora e mezzo di cammino.
+                  </div>
+               <div class="p-block text-block" data-facs="art2_p2">
+                  <br>Simili fatti luttuosi, che non si possono negare, non sareb-
+                  <br>bero avvenuti, se esistesse la <span class="gloss-trigger" data-ref="">legge<span class="tooltip-content">law</span></span> che da tanti anni noi
+                  <br>invochiamo e se la si applicasse lealmente e severamente. Le
+                  <br><span class="gloss-trigger" data-ref="">giovanette<span class="tooltip-content">person_group</span></span> e i <span class="gloss-trigger" data-ref="">giovanetti<span class="tooltip-content">person_group</span></span> a undici anni non devono lavorare
+                  <br>di notte; ecco un semplice aforisma, che nessun <span class="gloss-trigger" data-ref="">medico<span class="tooltip-content">person</span></span> e
+                  <br>nessun cuore di madre potrebbero disdire. Il sonno li sor-
+                  <br>prende durante il lavoro; e il <span class="entity term" title="Termine">telaio meccanico</span> spezza ine-
+                  <br>sorabilmente il cranio, come è avvenuto a <span class="entity placeName" title="Luogo">Pordenone</span>, e le
+                  <br>dita, come è avvenuto qualche anno fa a un <span class="gloss-trigger" data-ref="">giovanetto ope-
+                     <br>raio<span class="tooltip-content">person</span></span> della <span class="entity placeName" title="Luogo">Follina</span>. Vi è una serie di mali inevitabili nella in-
+                  <br>dustria , la quale ha i suoi morti e i suoi feriti per neces-
+                  <br>sità di cose. Ma ogni morte e ogni ferita che si potevano
+                  <br>evitare per provvidenza di <span class="gloss-trigger" data-ref="">legge<span class="tooltip-content">law</span></span> e di istituzione devono
+                  <br>suscitare un rimorso nelle <span class="gloss-trigger" data-ref="">classi dirigenti<span class="tooltip-content">group</span></span>, che fanno la
+                  <br><span class="gloss-trigger" data-ref="">legge<span class="tooltip-content">law</span></span> in <span class="entity placeName" title="Luogo">Italia</span>. Il rispetto e la tutela della vita umana nel-
+                  <br>l’età che per la sua tenerezza non può difendersi da sè è
+                  <br>un principio svolto in quasi tutte le <span class="gloss-trigger" data-ref="">legislazioni<span class="tooltip-content">law</span></span> e appli-
+                  <br>cato da per tutto in <span class="entity placeName" title="Luogo">Europa</span>, tranne nel <span class="entity placeName" title="Luogo">Belgio</span> e nell’<span class="entity placeName" title="Luogo">Italia</span>.
+                  <br>Quando ci decideremo a discorrere meno pietosamente e a
+                  <br>operare più democraticamente? In verità c’è da esserne <span class="gloss-trigger" data-ref="scorati">scorati<span class="tooltip-content">literary</span></span>!
+                  </div>
+            </article>
+            <article class="text-article" id="bibliografia_sec">
+               <div class="page-break">Pagina 253</div><span class="column-marker" title="Inizio Colonna 2">¶</span><div class="head-block text-block" data-facs="biblio_title">BIBLIOGRAFIA.</div>
+               <br>
+               <span class="entity persName" title="Persona">ENEA CAVALIERI</span>, 
+               <em>In giro pel mondo</em>, 
+               osservazioni ed appunti, 
+               <br>
+               Volume primo. — 
+               <span class="entity placeName" title="Luogo">Bologna</span>, 
+               Zanichelli, 
+               <span class="entity date" title="Data">1880</span>. 
+               
+               <div class="p-block text-block" data-facs="biblio_1_p1_beg biblio_1_p1_end"> 
+                  <br>I libri che narrano dei viaggi, tranne pochissimi, ci
+                  <br>danno la descrizione di quello che il viaggiatore ha ve-
+                  <br>duto, con maggiore o minore sollecitudine, secondo il ca-
+                  <br>rattere, l’intelligenza, l’attitudine ad osservare che possiede.
+                  <br>Ma di rado il lettore trova nei libri di viaggi, oltre alla
+                  <br>descrizione più o meno accurata ed artistica, secondo il
+                  
+                  
+                  <div class="page-break">Pagina 254</div> 
+                  <span class="column-marker" title="Inizio Colonna 1">¶</span> 
+                  
+                  <br>valore dello scrittore e l’importanza dell’argomento, pro-
+                  <br>fondità di pensieri, avvertenze sagaci, esame spassionato
+                  <br>e sicuro dei costumi dei vari popoli per trarne confronti
+                  <br>opportuni e per utilità del lettore. L’<span class="gloss-trigger" data-ref=""><span class="choice-wrap"><span class="diplomatic form-abbr">A.</span><span class="interpretative form-expan">autore</span></span><span class="tooltip-content"></span></span> del cui lavoro
+                  <br>abbiamo per ora solo il primo volume, ci ha offerto un
+                  <br>esempio imitabile e degno di lode sincera per il modo
+                  <br>tenuto nel raccontare questo suo viaggio intorno al globo.
+                  <br>Egli non infarcisce il suo libro con descrizioni per lo più
+                  <br>verbosamente <span class="gloss-trigger" data-ref="inani">inani<span class="tooltip-content">literary</span></span> di cose già note, ma racconta con chia-
+                  <br>rezza quello che è veramente nuovo. Parla dei paesi, delle
+                  <br>città, dei villaggi, delle usanze e dei costumi dei popoli da
+                  <br>lui veduti, in <span class="gloss-trigger" data-ref="guisa">guisa<span class="tooltip-content">literary</span></span> che il lettore possa dedurne qualche
+                  <br>nuova idea, e spesso con riflessioni e osservazioni <span class="gloss-trigger" data-ref="acconce">acconce<span class="tooltip-content">literary</span></span>
+                  <br>fa notare quello che segnatamente gli <span class="entity placeName" title="Luogo">Stati Uniti</span> hanno
+                  <br>fatto in così breve spazio di vita come nazione. Avverte
+                  <br>ed osserva certe somiglianze e certe dissonanze, le quali
+                  <br>necessariamente provocano <span class="choice-wrap"><span class="diplomatic form-orig">de’</span><span class="interpretative form-reg">dei</span></span> paragoni col <span class="gloss-trigger" data-ref="">nostro paese<span class="tooltip-content">place</span></span>
+                  <br>che <span class="choice-wrap"><span class="diplomatic form-orig">pur troppo</span><span class="interpretative form-reg">purtroppo</span></span> ci fanno pensare, dolendocene, alla oziosa
+                  <br>ricchezza di memorie gloriose, nella quale, poco curanti
+                  <br>del presente, ci culliamo. <em>Divitias miseras</em>. Anzi noi vor-
+                  <br>remmo che l’<span class="gloss-trigger" data-ref=""><span class="choice-wrap"><span class="diplomatic form-abbr">A.</span><span class="interpretative form-expan">autore</span></span><span class="tooltip-content"></span></span> facesse notare <span class="choice-wrap"><span class="diplomatic form-orig">anco</span><span class="interpretative form-reg">anche</span></span> più spesso in quante
+                  <br>cose gli altri popoli, e segnatamente l’<span class="gloss-trigger" data-ref="">anglo-sassone<span class="tooltip-content">people</span></span>, hanno
+                  <br>superato il <span class="gloss-trigger" data-ref="">nostro paese<span class="tooltip-content">place</span></span>. Al quale sarebbe di grande utilità
+                  <br>se coloro che possono, piuttosto che consumare il tempo in
+                  <br>vani lamenti, volessero imitare il nostro viaggiatore. Aspet-
+                  <br>tiamo con desiderio il seguito del suo lavoro, auguran-
+                  <br>doci che abbia l’importanza e la piacevolezza di questo e
+                  <br>anche con la speranza che esca meno deturpato da intolle-
+                  <br>rabili errori di stampa, come <span class="choice-wrap"><span class="diplomatic form-orig">pur troppo</span><span class="interpretative form-reg">purtroppo</span></span> lo è questo primo
+                  <br>volume.
+                  </div>
+               <br>
+               <span class="entity persName" title="Persona">S. SALOMONE-MARINO</span>,
+               <em>Dei famosi uomini d'arme siciliani fio- 
+                  <br>riti nel secolo XVI</em>. — 
+               <span class="entity placeName" title="Luogo">Palermo</span>, 
+                
+               <span class="choice-wrap"><span class="diplomatic form-abbr">tip.</span><span class="interpretative form-expan">tipografia</span></span> 
+               <span class="choice-wrap"><span class="diplomatic form-sic">Virzi</span><span class="interpretative form-corr">Virzì</span></span> 
+               , 
+               <span class="entity date" title="Data">1880</span>.
+               
+               <div class="p-block text-block" data-facs="biblio_2_p1">
+                  <br> « <span class="entity term" title="Termine">Storici</span> e <span class="entity term" title="Termine">cronisti</span>, scrive il 
+                  <span class="choice-wrap"><span class="diplomatic form-sic">dottorSalomone-Marino</span><span class="interpretative form-corr">dottor <span class="entity persName" title="Persona">Salomone-Marino</span></span></span>, no-
+                  <br>tando le ben condotte imprese, le sanguinose vittorie, i
+                  <br>trionfi, non cingono di <span class="gloss-trigger" data-ref="lauro">lauro<span class="tooltip-content">literary</span></span> e di quercia che il vessillo del
+                  <br>capo, trascurando o non curando quello 
+                  <span class="choice-wrap"><span class="diplomatic form-sic">de’gregari</span><span class="interpretative form-corr">
+                        <span class="choice-wrap"><span class="diplomatic form-orig">de’</span><span class="interpretative form-reg">dei</span></span>
+                        
+                        <span class="entity term" title="Termine">gregari</span>
+                        </span></span>; molto
+                  <br>meno poi sprecano la penna d’oro (devota al principe)
+                  <br>per le mirabili prove del <span class="entity term" title="Termine">cavaliere</span> o del semplice <span class="entity term" title="Termine">fante</span>, che
+                  <br>pur sono la causa <span class="gloss-trigger" data-ref="potissima">potissima<span class="tooltip-content">literary</span></span> d’una gloriosa giornata cam-
+                  <br>pale. » E per rimediarvi egli raccolse notizie di <span class="entity term" title="Termine">uomini d’ar-
+                     <br>me</span>, i quali meritavano esser rivendicati.
+                  </div>
+               <div class="p-block text-block" data-facs="biblio_2_p2">
+                  <br>Egli ricercò specialmente memorie intorno a <span class="entity persName" title="Persona">Francesco-
+                     <br>Salomone</span> e <span class="entity persName" title="Persona">Guglielmo Abbamonte</span>, che presero parte alla
+                  <br>disfida di <span class="entity placeName" title="Luogo">Barletta</span>: del secondo, <span class="gloss-trigger" data-ref="">palermitano<span class="tooltip-content">demonym</span></span>, ebbe poco a
+                  <br>trovare; ma del primo, <span class="gloss-trigger" data-ref="">messinese<span class="tooltip-content">demonym</span></span>, l’<span class="gloss-trigger" data-ref="">autore<span class="tooltip-content">person</span></span>, omonimo, presenta
+                  <br>molti cenni preziosi.
+                  </div>
+               <div class="p-block text-block" data-facs="biblio_2_p3">
+                  <br>Passa in seguito a rassegna vari altri che se non ebbero
+                  <br>l’onore di prendere parte al famoso <span class="gloss-trigger" data-ref="cimento">cimento<span class="tooltip-content">literary</span></span>, si trovarono
+                  <br>in altre lotte ben più sanguinose ed importanti.
+                  </div>
+               <div class="p-block text-block" data-facs="biblio_2_p4">
+                  <br>E molti vengono proprio tratti in luce, ma l’amor patrio
+                  <br>dell’<span class="gloss-trigger" data-ref=""><span class="choice-wrap"><span class="diplomatic form-abbr">A.</span><span class="interpretative form-expan">autore</span></span><span class="tooltip-content"></span></span> lo fece forse abbondare nella registrazione di sem-
+                  <br>plici nomi d’<span class="entity term" title="Termine">armigeri</span>, trovatisi in qualche combattimento.
+                  </div>
+               <div class="p-block text-block" data-facs="biblio_2_p5">
+                  <br>Vi è in questo lavoro molta erudizione, e maggiormente
+                  <br>lo rendono utile i documenti, che gli stanno annessi.
+                  </div>
+            </article>
+            <article class="text-article" id="notizie_sec">
+               <div class="page-break">Pagina 40</div><span class="column-marker" title="Inizio Colonna 2">¶</span><div class="head-block text-block" data-facs="notizie_title">NOTIZIE.</div>
+               <div class="p-block text-block" data-facs="">
+                  <br>— È stato annunziato ultimamente dal <span class="gloss-trigger" data-ref="">signor<span class="tooltip-content">honorific</span></span> <span class="entity persName" title="Persona">Posocco</span> nel <em>Fanfulla
+                     <br>della Domenica</em> che il <span class="choice-wrap"><span class="diplomatic form-abbr">cav.</span><span class="interpretative form-expan">cavaliere</span></span> <span class="entity persName" title="Persona">Prospero Viani</span> ha trovato la <span class="entity term" title="Termine">Cantica</span> ine-
+                  <br>dita di <span class="entity persName" title="Persona">Giacomo Leopardi</span> intitolata: <em>L'appressamento della morte</em>, e 
+                  <br>che questa sarà pubblicata nel <span class="entity date" title="Data">mese corrente</span> nella seconda parte del-
+                  <br>l’<em>Appendice</em> all’epistolario Leopardiano. Possiamo aggiungere che que-
+                  <br>st’appendice comprenderà pure un <span class="entity term" title="Termine">epigramma</span> inedito del <span class="gloss-trigger" data-ref="">Recanatese<span class="tooltip-content">epithet</span></span> 
+                  <br>contro il <span class="entity persName" title="Persona">Tommasèo</span>.
+                  </div>
+               <div class="p-block text-block" data-facs="">
+                  <br>— Il <span class="gloss-trigger" data-ref="">signor<span class="tooltip-content">honorific</span></span> <span class="entity persName" title="Persona">Buchanan</span> ha scritto un <span class="entity term" title="Termine">poema</span> che uscirà nella pros-
+                  <br>sima Contemporary Review. È la storia di un fanciullo educato senza 
+                  <br>nessuna idea religiosa di nessun genere. Dal nome del fanciullo, <span class="entity persName" title="Persona">Giu-
+                     <br>stiniano</span>, è intitolato il poema.
+                  </div>
+            </article>
+         </div>
+      </div>
+   </body>
+</html>
